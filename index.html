@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lars K.W. Gohlke</title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="3.0.3/css/bootstrap.css" media="all">
+    <!-- script src="3.0.3/css/bootstrap.min.js"></script -->
+    
+    <style>    
+	#header-container{
+		margin-top: 4rem;
+	}
+	#header{
+		display: table;
+		margin: 0 auto;
+	}
+	#header .branding {
+		float: left;
+	}
+	#header .logo{
+		font-size:	2.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+		text-align: left;
+	}
+	
+	#header .nav-container{
+		float: left;
+		padding: 0;
+		margin:0;
+		line-height: 5rem;
+	}
+	
+	#header .nav-container ul{
+		/* list-style-type: none; */
+		margin-bottom: 0;
+	}
+	#header .nav-container li {
+		display: inline-block;
+		top: auto;
+		height: 100%;
+		float: left;
+		position: relative;
+		-webkit-transition: margin 0.2s;
+		-moz-transition: margin 0.2s;
+		-o-transition: margin 0.2s;
+		transition: margin 0.2s;
+	}
+	#header .nav-container li a {
+		font-family: "Utopia","Georgia",serif;
+		color: #45555f;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+		border: none;
+		position: relative;
+		height: 100%;
+		padding: 0 1rem;
+		display: block;
+		text-decoration: none;
+		white-space: nowrap;
+		-webkit-transition: color 0.2s;
+		-moz-transition: color 0.2s;
+		-o-transition: color 0.2s;
+		transition: color 0.2s;
+	}
+	#header .nav-container li a:hover {
+		color: #00a4e4;
+	}
+	
+	#content{
+		height: 100%;
+		text-align: center;
+	}
+	
+	.col1-layout {
+		max-width: 100%;
+	}
+	.page {
+		max-width: 100%;
+	}
+	.row {
+		max-width: inherit;
+	}
+	.intro{
+		padding: 5rem 0;
+		margin: auto;
+		max-width:100rem;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	
+	.intro .me{
+		float:left;
+		text-align: center;
+		/* border-right: 1px solid grey; */
+	}
+	
+	.intro .me img{
+		max-width : 80%;
+		border: 1px solid gray;
+	}
+	
+	.intro .welcome{
+		padding-left: 4rem;
+		margin: 2rem 0;
+	}
+	
+	#penguin div {
+		margin: 0;
+		padding: 0;
+		float:left;
+	}
+	
+	#penguin{
+		padding-top: 4rem;
+	}
+	
+	#penguin .left{
+		text-align: center;
+		vertical-align:	middle;
+	}
+	
+	
+	#penguin img.image{
+		border: 0;
+		max-width: 50%;
+		margin
+	}
+	
+	.margin-top{
+		margin-top: 2rem !important;
+	}
+    </style>
+    
+  </head>
+  <body>
+	<div class="wrapper">
+		<div class="page">
+			<div id="header-container" class="header-container">
+				<div id="header">
+					<div class="header-wrapper">
+						<div class="branding">
+							<div class="logo">Lars K.W. Gohlke</div>
+						</div>
+						<div class="nav-container">
+							<ul>
+								<li><a href="#arbeiten">Arbeiten</a></li>
+								<li><a href="#curi">Curriculum Vitae</a></li>
+								<li><a href="#contact">Kontakt</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="content" class="col1-layout hero-slideshow-wrapper">
+				<img src="teaser_4.JPG" class="img-responsive" alt="sunset in Altenhof/Pionierrepublik"/>
+			</div>
+		</div>
+		<div class="page">
+			<div class="row intro">
+				<div class="col-md-4 me">
+					<img src="me.jpg"/>
+				</div>
+				<div class="col-md-8 welcome">
+					<strong>Willkommen</strong>
+					<p>... zu meinem Beitrag für unsere Netzkultur ;)</p>
+
+					<strong>Welcome</strong>
+
+					<p>... to my contribution to our lively internet culture<p/>
+
+					<strong>Selamat datang</strong>
+
+					<p>... bersahaja hanya selamat datang ;)</p>
+
+					<div id="penguin" class="row">
+						<div class="left col-md-3">
+							<img src="tux_h200px.jpg" class="image" alt="Linux penguin"/>
+						</div>
+						<div class="col-md-9 margin-top">
+							Ja ... bevor Fragen kommen, der Pinguin soll meine Verbundenheit zu Linux zeigen. &lt;pathetic&gt; In den Stunden mit vi und bash habe ich mehr gesehen und gelernt, als ich mit der Maus unter dem Fensterbetriebssystem je in der Lage gewesen wäre.&lt;/pathetic&gt;
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
