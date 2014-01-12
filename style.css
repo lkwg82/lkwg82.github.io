@@ -165,10 +165,6 @@ h1,h2,h3,h4{
 	font-size: small;
 }
 
-#arbeiten .item{
-	
-}
-
 #arbeiten .abstract{
 	margin-left: 15px;
 	line-height: 2.5rem;
@@ -208,6 +204,29 @@ h1,h2,h3,h4{
 	-moz-transition: background-color 0.4s;
 	-o-transition: background-color 0.4s;
 	transition: background-color 0.4s;
+}
+
+#curi{
+	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+}
+
+#curi h3{
+		text-decoration : underline;
+}
+
+#curi .row span{
+	font-size: large;
+}
+
+#curi .row div{
+	padding-top: 2rem;
+}
+
+#curi .row div:first-child{
+	text-align: right;
+}
+#curi .row div:last-child{
+	border-left: 1px solid blue;
 }
 
 #impressum{
