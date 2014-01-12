@@ -239,8 +239,13 @@ h3{
 #cur #fhg {
 	margin: 0rem 0;
 }
-#fhg .image{
-	padding: 0 0rem;
+
+
+#curi #fhg .bild{
+		text-align: center;
+}
+
+#curi #fhg .bild img{
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 	width: 90%;
