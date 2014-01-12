@@ -69,6 +69,11 @@
 }
 #header .nav-container li a:hover {
 	color: #00a4e4;
+background-color: #dfFFFF;
+-webkit-transition: background-color 0.4s;
+-moz-transition: background-color 0.4s;
+-o-transition: background-color 0.4s;
+transition: background-color 0.4s;
 }
 
 #header .teaser{
@@ -88,7 +93,7 @@
 
 .border-top{
 	margin: 5rem auto;
-	border-top: 1px solid grey;
+	border-top: 1px solid rgba(0, 0, 0, 0.17);
 	padding-top: 5rem;		
 }
 
@@ -209,7 +214,7 @@ h3{
 }
 
 #arbeiten .image{
-	border: 1px solid grey;
+	border: 1px solid #dfffff;
 	max-width: 100%;
 }
 
@@ -233,7 +238,7 @@ h3{
 	text-align: right;
 }
 #curi .row div:last-child{
-	border-left: 1px solid blue;
+	border-left: 1px solid rgba(25, 25, 151, 0.14);;
 }
 
 #cur #fhg {
@@ -253,9 +258,15 @@ h3{
 }
 
 #impressum{
+	max-width: 60rem;
 	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
 	letter-spacing: 0.1rem;
+	margin-bottom: 5rem;
 }
+
+#impressum row *{
+	text-align:center;
+	}
 
 #impressum *[itemprop="image"] {
 	display: none;
