@@ -71,10 +71,12 @@
 	color: #00a4e4;
 }
 
-
-#header .teaser {
-	height: 100%;
+#header .teaser{
 	text-align: center;
+}
+#header .teaser img{
+	height: 100%;
+	width: 100%;
 	max-width: 100%;
 }
 
@@ -91,8 +93,9 @@
 
 .intro{
 	padding: 5rem 0;
-	font-size: 1rem;
-	line-height: 1.5rem;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
 }
 
 .intro .me{
@@ -101,6 +104,8 @@
 }
 
 .intro .me img{
+	height: 100%;
+	width: 100%;
 	max-width : 80%;
 	border: 1px solid gray;
 }
@@ -127,8 +132,9 @@
 
 #penguin img.image{
 	border: 0;
+	height: 100%;
+	width: 100%;
 	max-width: 50%;
-	margin
 }
 
 .margin-top{
@@ -153,7 +159,6 @@ h1,h2,h3,h4{
 	margin-top: 0;
 }
 #arbeiten h4{
-	margin-bottom:0;
 	text-transform: uppercase;
 	color: grey;
 	letter-spacing: 0.2rem;
@@ -166,15 +171,15 @@ h1,h2,h3,h4{
 
 #arbeiten .abstract{
 	margin-left: 15px;
-	/* margin-right: -15px;*/
 	line-height: 2.5rem;
 	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
 }
 
 #arbeiten .abstract p{
 	padding: 5px;
-	background-color: #dfFFFF;
+	background-color: #fefede;
 	border: 1px solid #efFFFF;
+	text-align: justify;
 }
 
 #arbeiten .abstract .info{
