@@ -213,3 +213,10 @@ h1,h2,h3,h4{
 #impressum *[itemprop="image"] {
 	display: none;
 }
+
+.footer{
+		margin:auto;
+		text-align:center;
+		font-size: x-small;
+		color: grey;
+}
