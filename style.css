@@ -142,19 +142,21 @@
 	margin-top: 2rem !important;
 }
 
-#arbeiten{
-	
+#arbeiten .item{
+	display: inline-block;
+	margin-top: 4rem;
 }
 
 h1,h2,h3,h4{
 	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
 }
 
+h3{
+	font-size: 2rem;
+}
+
 #arbeiten h2,h3,h4{
 	margin-left: 1rem;
-}
-#arbeiten h2{
-	margin-bottom: 5rem;
 }
 #arbeiten h3{
 	margin-top: 0;
@@ -186,7 +188,6 @@ h1,h2,h3,h4{
 
 #arbeiten .downloads{
 	margin-left: -15px;
-	margin-bottom: 10rem;
 }
 
 #arbeiten .downloads ul{
@@ -205,6 +206,11 @@ h1,h2,h3,h4{
 	-moz-transition: background-color 0.4s;
 	-o-transition: background-color 0.4s;
 	transition: background-color 0.4s;
+}
+
+#arbeiten .image{
+	border: 1px solid grey;
+	max-width: 100%;
 }
 
 #curi{
@@ -235,7 +241,6 @@ h1,h2,h3,h4{
 }
 #fhg .image{
 	padding: 0 0rem;
-	border: 0;
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 	width: 90%;
