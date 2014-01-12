@@ -19,6 +19,7 @@
 					</div>
 					<div class="nav-container">
 						<ul>
+							<li><a href="http://blog.lgohlke.de">Blog</a></li>
 							<li><a href="#arbeiten">Arbeiten</a></li>
 							<li><a href="#curi">Curriculum Vitae</a></li>
 							<li><a href="#contact">Kontakt</a></li>
@@ -117,23 +118,23 @@
 		</div>
 	</div>
 	
-	<script src="jquery-2.0.0.min.js"></script>
-	<script src="animatescroll.js"></script>
+	<script src="js/jquery-2.0.0.min.js"></script>
+	<script src="js/animatescroll.js"></script>
 	
 	<script>
 		$(function() {
 		  $( "#header a" ).each(function(){
-			var link = this;
-			console.log( link.href.split('#')[1] );
-			var linkToId = link.href.split('#')[1];
+			var linkObject= this;
+			var link = $(linkObject).attr('href');
 			
-			console.log("replace " + link.href + " with #");
-			$(link).attr("href",'#');
-			
-			$( this ).click(function(){
-				$('#' + linkToId).animatescroll({scrollSpeed:2000,easing:'easeOutCirc'});
+			if ( link.match(/^#.*/) ){
+				$(linkObject).attr("href",'#');
 				
-			});
+				$( this ).click(function(){
+					$(link).animatescroll({scrollSpeed:2000,easing:'easeOutCirc'});
+					
+				});
+			}
 		  });
 		});
 	</script
