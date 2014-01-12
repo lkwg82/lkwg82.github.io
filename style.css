@@ -9,6 +9,8 @@ font-family: Utopia, Georgia, serif;
 }
 .row {
 	max-width: inherit;
+	margin-left: 0;
+	margin-right: 0;
 	/* padding:0; */
 }
 
@@ -139,6 +141,7 @@ font-family: Utopia, Georgia, serif;
 }
 
 #arbeiten h2,h3,h4{
+	margin-left: 1rem;
 	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
 }
 #arbeiten h2{
@@ -148,7 +151,7 @@ font-family: Utopia, Georgia, serif;
 	margin-top: 0;
 }
 #arbeiten h4{
-	margin:0;
+	margin-bottom:0;
 	text-transform: uppercase;
 	color: grey;
 	letter-spacing: 0.2rem;
@@ -159,24 +162,27 @@ font-family: Utopia, Georgia, serif;
 	
 }
 
-
-
 #arbeiten .abstract{
 	margin-left: 15px;
-	margin-right: -15px;
+	/* margin-right: -15px;*/
 	line-height: 2.5rem;
 	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
-	margin-bottom: 4rem;
 }
 
 #arbeiten .abstract p{
-	padding: 2px;
+	padding: 5px;
 	background-color: #dfFFFF;
+	border: 1px solid #efFFFF;
 }
 
 #arbeiten .abstract .info{
 	padding-left:1rem;
 	color: #101010;
+}
+
+#arbeiten .downloads{
+	margin-left: -15px;
+	margin-bottom: 10rem;
 }
 
 #arbeiten .downloads ul{
