@@ -6,7 +6,7 @@ set -e
 baseDir=$(git rev-parse --show-toplevel)
 file=$baseDir/index.html
 
-version=$(git log  -n1 --format=format:"%H %ci")
+version=$(git log  -n1 --format=format:"%ci|%H")
 message="updated version info"
 
 if [ "$(git log  -n1 --format=format:"%s")" != "$message" ] ;then
