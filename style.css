@@ -3,3 +3,196 @@ font-family: Utopia, Georgia, serif;
 .logo{
 	font-size:	28px;
 }
+
+.page {
+	max-width: 100%;
+}
+.row {
+	max-width: inherit;
+	/* padding:0; */
+}
+
+#header-container{
+	margin-top: 4rem;
+}
+#header{
+	display: table;
+	margin: 0 auto;
+}
+#header .branding {
+	float: left;
+}
+#header .logo{
+	font-size:	2.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	text-align: left;
+}
+
+#header .nav-container{
+	float: left;
+	padding: 0;
+	margin:0;
+	line-height: 5rem;
+}
+
+#header .nav-container ul{
+	/* list-style-type: none; */
+	margin-bottom: 0;
+}
+#header .nav-container li {
+	display: inline-block;
+	top: auto;
+	height: 100%;
+	float: left;
+	position: relative;
+	-webkit-transition: margin 0.2s;
+	-moz-transition: margin 0.2s;
+	-o-transition: margin 0.2s;
+	transition: margin 0.2s;
+}
+#header .nav-container li a {
+	font-family: "Utopia","Georgia",serif;
+	color: #45555f;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	border: none;
+	position: relative;
+	height: 100%;
+	padding: 0 1rem;
+	display: block;
+	text-decoration: none;
+	white-space: nowrap;
+	-webkit-transition: color 0.2s;
+	-moz-transition: color 0.2s;
+	-o-transition: color 0.2s;
+	transition: color 0.2s;
+}
+#header .nav-container li a:hover {
+	color: #00a4e4;
+}
+
+#content{
+	height: 100%;
+	text-align: center;
+}
+
+.col1-layout {
+	max-width: 100%;
+}
+.intro{
+	padding: 5rem 0;
+	margin: auto;
+	max-width:100rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+.intro .me{
+	float:left;
+	text-align: center;
+	/* border-right: 1px solid grey; */
+}
+
+.intro .me img{
+	max-width : 80%;
+	border: 1px solid gray;
+}
+
+.intro .welcome{
+	padding-left: 4rem;
+	margin: 2rem 0;
+}
+	
+#penguin div {
+	margin: 0;
+	padding: 0;
+	float:left;
+}
+
+#penguin{
+	padding-top: 4rem;
+}
+
+#penguin .left{
+	text-align: center;
+	vertical-align:	middle;
+}
+
+#penguin img.image{
+	border: 0;
+	max-width: 50%;
+	margin
+}
+
+.margin-top{
+	margin-top: 2rem !important;
+}
+
+#arbeiten{
+	display: table;
+	margin: 5rem auto;
+	border-top: 1px solid grey;
+	padding-top: 5rem;		
+	max-width: 100rem;
+}
+
+#arbeiten h2,h3,h4{
+	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+}
+#arbeiten h2{
+	margin-bottom: 5rem;
+}
+#arbeiten h3{
+	margin-top: 0;
+}
+#arbeiten h4{
+	margin:0;
+	text-transform: uppercase;
+	color: grey;
+	letter-spacing: 0.2rem;
+	font-size: small;
+}
+
+#arbeiten .item{
+	
+}
+
+
+
+#arbeiten .abstract{
+	margin-left: 15px;
+	margin-right: -15px;
+	line-height: 2.5rem;
+	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+	margin-bottom: 4rem;
+}
+
+#arbeiten .abstract p{
+	padding: 2px;
+	background-color: #dfFFFF;
+}
+
+#arbeiten .abstract .info{
+	padding-left:1rem;
+	color: #101010;
+}
+
+#arbeiten .downloads ul{
+	list-style: none;
+	line-height: 3rem;	
+}
+
+#arbeiten .downloads a{
+	padding: 1rem;
+	font-weight: 700;
+}
+
+#arbeiten .downloads a:hover{
+	background-color: #dfFFFF;
+	-webkit-transition: background-color 0.4s;
+	-moz-transition: background-color 0.4s;
+	-o-transition: background-color 0.4s;
+	transition: background-color 0.4s;
+}
