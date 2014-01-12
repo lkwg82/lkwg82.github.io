@@ -1,45 +1,41 @@
-font-family: Utopia, Georgia, serif;
 
-.logo{
-	font-size:	28px;
-}
 
-.page {
-	max-width: 100%;
-}
 .row {
 	max-width: inherit;
 	margin-left: 0;
 	margin-right: 0;
-	/* padding:0; */
 }
 
-#header-container{
+#header{
 	margin-top: 4rem;
 }
-#header{
+
+#header .header-wrapper{
 	display: table;
 	margin: 0 auto;
 }
+
 #header .branding {
 	float: left;
-}
-#header .logo{
 	font-size:	2.75rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
-	text-align: left;
+	font-family: Utopia, Georgia, serif;
+}
+
+@media (max-width: 750px){
+	#header .branding {
+		text-align: center;
+		float: none;
+	}
 }
 
 #header .nav-container{
 	float: left;
-	padding: 0;
-	margin:0;
 	line-height: 5rem;
 }
 
 #header .nav-container ul{
-	/* list-style-type: none; */
 	margin-bottom: 0;
 }
 #header .nav-container li {
@@ -75,18 +71,26 @@ font-family: Utopia, Georgia, serif;
 	color: #00a4e4;
 }
 
-#content{
+
+#header .teaser {
 	height: 100%;
 	text-align: center;
-}
-
-.col1-layout {
 	max-width: 100%;
 }
+
+.main_content{
+	margin: auto;
+	max-width:100rem;	
+}
+
+.border-top{
+	margin: 5rem auto;
+	border-top: 1px solid grey;
+	padding-top: 5rem;		
+}
+
 .intro{
 	padding: 5rem 0;
-	margin: auto;
-	max-width:100rem;
 	font-size: 1rem;
 	line-height: 1.5rem;
 }
@@ -94,7 +98,6 @@ font-family: Utopia, Georgia, serif;
 .intro .me{
 	float:left;
 	text-align: center;
-	/* border-right: 1px solid grey; */
 }
 
 .intro .me img{
@@ -133,16 +136,15 @@ font-family: Utopia, Georgia, serif;
 }
 
 #arbeiten{
-	display: table;
-	margin: 5rem auto;
-	border-top: 1px solid grey;
-	padding-top: 5rem;		
-	max-width: 100rem;
+	
+}
+
+h1,h2,h3,h4{
+	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
 }
 
 #arbeiten h2,h3,h4{
 	margin-left: 1rem;
-	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
 }
 #arbeiten h2{
 	margin-bottom: 5rem;
@@ -201,4 +203,13 @@ font-family: Utopia, Georgia, serif;
 	-moz-transition: background-color 0.4s;
 	-o-transition: background-color 0.4s;
 	transition: background-color 0.4s;
+}
+
+#impressum{
+	font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+	letter-spacing: 0.1rem;
+}
+
+#impressum *[itemprop="image"] {
+	display: none;
 }

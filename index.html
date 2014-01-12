@@ -5,114 +5,131 @@
   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="3.0.3/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="3.0.3/css/bootstrap.css" media="all">
     <link rel="stylesheet" type="text/css" href="./style.css" media="all">
     <!-- script src="3.0.3/css/bootstrap.min.js"></script -->
   </head>
   <body>
-	<div class="page">
-		<div id="header-container" class="header-container">
-			<div id="header">
-				<div class="header-wrapper">
-					<div class="branding">
-						<div class="logo">Lars K.W. Gohlke</div>
-					</div>
-					<div class="nav-container">
-						<ul>
-							<li><a href="http://blog.lgohlke.de">Blog</a></li>
-							<li><a href="#arbeiten">Arbeiten</a></li>
-							<li><a href="#curi">Curriculum Vitae</a></li>
-							<li><a href="#contact">Kontakt</a></li>
-						</ul>
-					</div>
-				</div>
+	<div id="header" class="page">
+		<div class="header-wrapper">
+			<div class="branding">Lars K.W. Gohlke</div>
+			<div class="nav-container">
+				<ul>
+					<li><a href="http://blog.lgohlke.de">Blog</a></li>
+					<li><a href="#arbeiten">Arbeiten</a></li>
+					<li><a href="#curi">Curriculum Vitae</a></li>
+					<li><a href="#impressum">Kontakt</a></li>
+				</ul>
 			</div>
 		</div>
-		<div id="content" class="col1-layout hero-slideshow-wrapper">
+		<div class="teaser">
 			<img src="teaser_4.JPG" class="img-responsive" alt="sunset in Altenhof/Pionierrepublik"/>
 		</div>
 	</div>
-	<div class="page">
-		<div class="row intro">
-			<div class="col-md-4 me">
-				<img src="me.jpg"/>
-			</div>
-			<div class="col-md-8 welcome">
-				<strong>Willkommen</strong>
-				<p>... zu meinem Beitrag für unsere Netzkultur ;)</p>
+	<div class="page row intro main_content">
+		<div class="col-md-4 me">
+			<img src="me.jpg" alt="Lars. K.W. Gohlke"/>
+		</div>
+		<div class="col-md-8 welcome">
+			<strong>Willkommen</strong>
+			<p>... zu meinem Beitrag f&uuml;r unsere Netzkultur ;)</p>
 
-				<strong>Welcome</strong>
+			<strong>Welcome</strong>
 
-				<p>... to my contribution to our lively internet culture</p>
+			<p>... to my contribution to our lively internet culture</p>
 
-				<strong>Selamat datang</strong>
+			<strong>Selamat datang</strong>
 
-				<p>... bersahaja hanya selamat datang ;)</p>
+			<p>... bersahaja hanya selamat datang ;)</p>
 
-				<div id="penguin" class="row">
-					<div class="left col-md-3">
-						<img src="tux_h200px.jpg" class="image" alt="Linux penguin"/>
-					</div>
-					<div class="col-md-9 margin-top">
-						Ja ... bevor Fragen kommen, der Pinguin soll meine Verbundenheit zu Linux zeigen. &lt;pathetic&gt; In den Stunden mit vi und bash habe ich mehr gesehen und gelernt, als ich mit der Maus unter dem Fensterbetriebssystem je in der Lage gewesen wäre.&lt;/pathetic&gt;
-					</div>
+			<div id="penguin" class="row">
+				<div class="left col-md-3">
+					<img src="tux_h200px.jpg" class="image" alt="Linux penguin"/>
+				</div>
+				<div class="col-md-9 margin-top">
+					Ja ... bevor Fragen kommen, der Pinguin soll meine Verbundenheit zu Linux zeigen. &lt;pathetic&gt; In den Stunden mit vi und bash habe ich mehr gesehen und gelernt, als ich mit der Maus unter dem Fensterbetriebssystem je in der Lage gewesen w&auml;re.&lt;/pathetic&gt;
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="page" id="arbeiten">
+	<div class="page row main_content border-top" id="arbeiten">
 		<a name="arbeiten"></a>
 		<h2>Arbeiten</h2>
 		
-		<div class="row">
-			<div id="masterthesis" class="item">
-				<div class="col-md-12">
-					<h4>Masterarbeit - 2012.05.</h4>
-					<h3>Analyse und Konzept zur Verbesserung der statischen Fehlereingrenzung</h3>
-				</div>
-				<div class="col-md-8 abstract">
-					<p>Thema der vorliegenden Arbeit war die Analyse und Erarbeitung eines Konzeptes zur Verbesserung der statischen Fehlereingrenzung. Dabei ging es darum, einen  leichtgewichtigen heuristischen Gegenentwurf zu aufwendigen statistischen Verfahren (z.B. Delta Debugging) zu entwickeln. Der Gegenentwurf beinhaltete die Modellierung einer Metrik zur Bestimmung der signifikantesten Tests.</p>
-					<span class="info">Noten: 1.0 + 1.9 | Prototyp ver&oumlffentlicht unter <a href="http://code.google.com/p/metricanalyzer/">http://code.google.com/p/metricanalyzer/</a></span>
-				</div>
-				<div class="col-md-4 downloads">
-				   <ul>
-					<li><a href="/download/projects/masterthesis/Masterarbeit_Gohlke_v20120423.pdf">Download Masterarbeit</a></li>
-					<li><a href="/download/projects/masterthesis/MasterPr%c3%a4sentation.pdf">Download Präsentation</a></li>
-					<li><a href="/download/projects/masterthesis/MasterPoster.pdf">Download Poster</a></li>
-				   </ul>
-				</div>
+		<div id="masterthesis" class="item">
+			<div class="col-md-12">
+				<h4>Masterarbeit - 2012.05.</h4>
+				<h3>Analyse und Konzept zur Verbesserung der statischen Fehlereingrenzung</h3>
 			</div>
-			<div id="pre-masterthesis" class="item">
-				<div class="col-md-12">
-					<h4>Studienarbeit - 2010.03.</h4>
-					<h3>Qualitätsmanagement mit Continuous Integration</h3>
-				</div>
-				<div class="col-md-8 abstract">
-					<p>Wie weit läßt sich das Konzept der kontinuierlichen Integration in der Praxis wirklich umsetzen? Dieser zentralen Frage wurde in der Studienarbeit nachgegangen.</p>
-					<span class="info">Note: 1.0</span>
-				</div>
-				<div class="col-md-4 downloads">
-				   <ul>
-					<li><a href="/download/projects/studienarbeit/Studienarbeit_Gohlke_20042002.pdf">Download Studienarbeit</a></li>
-					<li><a href="/download/projects/studienarbeit/Abschlusspraesentation-Studienarbeit-hudson.pdf">Download Präsentation</a></li>
-				   </ul>
-				</div>
+			<div class="col-md-8 abstract">
+				<p>Thema der vorliegenden Arbeit war die Analyse und Erarbeitung eines Konzeptes zur Verbesserung der statischen Fehlereingrenzung. Dabei ging es darum, einen  leichtgewichtigen heuristischen Gegenentwurf zu aufwendigen statistischen Verfahren (z.B. Delta Debugging) zu entwickeln. Der Gegenentwurf beinhaltete die Modellierung einer Metrik zur Bestimmung der signifikantesten Tests.</p>
+				<span class="info">Noten: 1.0 + 1.9 | Prototyp ver&oumlffentlicht unter <a href="http://code.google.com/p/metricanalyzer/">http://code.google.com/p/metricanalyzer/</a></span>
 			</div>
-			<div id="diplomathesis" class="item">
-				<div class="col-md-12">
-					<h4>Diplomarbeit - 2008.08.</h4>
-					<h3>SOA für Multi-Messaging Integrationskonzept am Beispiel Skype</h3>
+			<div class="col-md-4 downloads">
+			   <ul>
+				<li><a href="/download/projects/masterthesis/Masterarbeit_Gohlke_v20120423.pdf">Download Masterarbeit</a></li>
+				<li><a href="/download/projects/masterthesis/MasterPr%c3%a4sentation.pdf">Download Pr&auml;sentation</a></li>
+				<li><a href="/download/projects/masterthesis/MasterPoster.pdf">Download Poster</a></li>
+			   </ul>
+			</div>
+		</div>
+		<div id="pre-masterthesis" class="item">
+			<div class="col-md-12">
+				<h4>Studienarbeit - 2010.03.</h4>
+				<h3>Qualit&auml;tsmanagement mit Continuous Integration</h3>
+			</div>
+			<div class="col-md-8 abstract">
+				<p>Wie weit l&auml;&szlig;t sich das Konzept der kontinuierlichen Integration in der Praxis wirklich umsetzen? Dieser zentralen Frage wurde in der Studienarbeit nachgegangen.</p>
+				<span class="info">Note: 1.0</span>
+			</div>
+			<div class="col-md-4 downloads">
+			   <ul>
+				<li><a href="/download/projects/studienarbeit/Studienarbeit_Gohlke_20042002.pdf">Download Studienarbeit</a></li>
+				<li><a href="/download/projects/studienarbeit/Abschlusspraesentation-Studienarbeit-hudson.pdf">Download Pr&auml;sentation</a></li>
+			   </ul>
+			</div>
+		</div>
+		<div id="diplomathesis" class="item">
+			<div class="col-md-12">
+				<h4>Diplomarbeit - 2008.08.</h4>
+				<h3>SOA f&uuml;r Multi-Messaging Integrationskonzept am Beispiel Skype</h3>
+			</div>
+			<div class="col-md-8 abstract">
+				<p>Die Arbeit bietet einen Einblick in die Entwicklung einer serviceorientierten Architektur und in die Verwendung von Enterprise Integration Pattern am Beispiel von Multi-Messaging mit Skype. Aufbauend auf einer SOA konnten weiterhin Aspekte zur L&ouml;sung der Skalierbarkeit und Robustheit eines Dienstes beschrieben und die Aufl&ouml;sung von Abh&auml;ngigkeiten unter den Diensten betrachtet werden.</p>
+				<span class="info">Noten: 1.0 + 1.3</span>
+			</div>
+			<div class="col-md-4 downloads">
+			   <ul>
+				<li><a href="/download/projects/diplomarbeit/DiplomarbeitGohlke_SOA_SKYPE_v20080820.pdf">Download Diplomarbeit</a></li>
+				<li><a href="/download/projects/diplomarbeit/DiplomPraesentation.pdf">Download Pr&auml;sentation</a></li>
+			   </ul>
+			</div>
+		</div>
+	</div>
+	<div class="page row main_content border-top" id="impressum">
+		<a name="impressum"></a>
+		<div class="col-sm-4">
+			<h2>Impressum</h2>
+		</div>
+		<div class="col-sm-8" itemscope itemtype="http://schema.org/Person">
+			<div class="row">
+				<div class="col-sm-6">
+					<span itemprop="name">Lars K.W. Gohlke</span>
+					<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<span itemprop="streetAddress">Tulpenstra&szlig;e 21</span><br/>
+						<span itemprop="postalCode">12203</span> <span itemprop="addressLocality">Berlin</span><br/>
+						<span itemprop="addressCountry">Deutschland</span>
+						<span itemprop="image"><img src="me.jpg" alt="Lars K.W. Gohlke"/></span>
+					</div>
 				</div>
-				<div class="col-md-8 abstract">
-					<p>Die Arbeit bietet einen Einblick in die Entwicklung einer serviceorientierten Architektur und in die Verwendung von Enterprise Integration Pattern am Beispiel von Multi-Messaging mit Skype. Aufbauend auf einer SOA konnten weiterhin Aspekte zur Lösung der Skalierbarkeit und Robustheit eines Dienstes beschrieben und die Auflösung von Abhängigkeiten unter den Diensten betrachtet werden.</p>
-					<span class="info">Noten: 1.0 + 1.3</span>
-				</div>
-				<div class="col-md-4 downloads">
-				   <ul>
-					<li><a href="/download/projects/diplomarbeit/DiplomarbeitGohlke_SOA_SKYPE_v20080820.pdf">Download Diplomarbeit</a></li>
-					<li><a href="/download/projects/diplomarbeit/DiplomPraesentation.pdf">Download Präsentation</a></li>
-				   </ul>
+				<div class="col-sm-6">
+					<span>Kontakt</span>
+					<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<span itemprop="telephone">+49 3334 299307</span><br/>
+						<span itemprop="email"><a href="mailto:lkwg82@gmx.de?subject=Kontakt via website">lkwg82@gmx.de</a></span><br/>
+						<span itemprop="addressCountry">Deutschland</span>
+					</div>
 				</div>
 			</div>
 		</div>
