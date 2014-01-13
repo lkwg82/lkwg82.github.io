@@ -25,11 +25,11 @@
 				</ul>
 			</div>
 		</div>
-		<div class="teaser">
+		<div class="teaser trackView" id="teaser">
 			<img src="img/teaser_4_small.JPG" delayed-src="img/teaser_4.JPG" alt="sunset in Altenhof/Pionierrepublik"/>
 		</div>
 	</div>
-	<div class="page row intro main_content">
+	<div class="page row intro main_content trackView" id="me">
 		<div class="col-md-4 me">
 			<img src="img/me2_small.jpg" delayed-src="img/me2.jpg" alt="Lars. K.W. Gohlke"/>
 		</div>
@@ -58,7 +58,7 @@
 	<div class="page row main_content border-top" id="arbeiten">
 		<h2>Arbeiten</h2>
 		
-		<div id="masterthesis" class="item">
+		<div id="masterthesis" class="item trackView">
 			<div class="col-md-12">
 				<h4>Masterarbeit - 2012.05.</h4>
 				<h3>Analyse und Konzept zur Verbesserung der statischen Fehlereingrenzung</h3>
@@ -75,7 +75,7 @@
 			   </ul>
 			</div>
 		</div>
-		<div id="pre-masterthesis" class="item">
+		<div id="pre-masterthesis" class="item trackView">
 			<div class="col-md-12">
 				<h4>Studienarbeit - 2010.03.</h4>
 				<h3>Qualit&auml;tsmanagement mit Continuous Integration</h3>
@@ -91,7 +91,7 @@
 			   </ul>
 			</div>
 		</div>
-		<div id="diplomathesis" class="item">
+		<div id="diplomathesis" class="item trackView">
 			<div class="col-md-12">
 				<h4>Diplomarbeit - 2008.08.</h4>
 				<h3>SOA f&uuml;r Multi-Messaging Integrationskonzept am Beispiel Skype</h3>
@@ -107,7 +107,7 @@
 			   </ul>
 			</div>
 		</div>
-		<div id="intern" class="item">
+		<div id="intern" class="item trackView">
 			<div class="col-md-12">
 				<h3>Auslandspraktikum - 2006.08.</h3>
 			</div>
@@ -125,7 +125,7 @@
 	</div>
 	<div class="page row main_content border-top" id="curi">
 		<h2>Curriculum Vitae</h2>
-		<div id="job">
+		<div id="job" class="trackView">
 			<div class="col-xs-12"><h3>Berufliche T&auml;tigkeiten</h3></div>
 			<div class="row">
 				<div class="col-xs-4">seit 05.2012</div>
@@ -213,7 +213,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="fhg">
+		<div id="fhg" class="trackView">
 			<div class="col-xs-12"><h3>F&auml;higkeiten</h3></div>
 			<div class="row">
 				<div class="col-xs-4">Fremdsprachen</div>
@@ -225,7 +225,7 @@
 				<img src="img/fhg3_small.jpg" delayed-src="img/fhg3.jpg" alt="Fähigkeiten" class="image"/>
 			</div>
 		</div>
-		<div id="scholar" class="table">
+		<div id="scholar" class="table trackView">
 			<div class="col-xs-12"><h3>Schule/Studium</h3></div>
 			<div class="row">
 				<div class="col-xs-4">09.2008 - 05.2012</div>
@@ -257,7 +257,7 @@
 
 	</div>
 	<div class="main_content border-top" style="margin-bottom:0">&nbsp;</div>
-	<div class="page row main_content" id="impressum">
+	<div class="page row main_content trackView" id="impressum">
 		<div class="col-sm-4">
 			<h2>Impressum</h2>
 		</div>
@@ -277,35 +277,18 @@
 						<span itemprop="telephone">+49 3334 299307</span><br/>
 						<span itemprop="email"><a href="mailto:lkwg82@gmx.de?subject=Kontakt%20via%20website">lkwg82@gmx.de</a></span><br/>
 					</div>
-					<a rel="author" href="https://plus.google.com/105317998986549241977">G+</a><br/>
+					<a rel="author" href="https://plus.google.com/105317998986549241977">Google Plus</a><br/>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="page footer main_content">
-		<span class="version">last changed 2014-01-12 23:39:51 +0100 0c4c498e5f58b82d7d9d387929d404f27271e469</span>
+		<span class="version">last changed 2014-01-14 00:28:23 +0100 fd0657da9b3d330ffc7d7ec6bdd6bad4c05190b0</span>
 	</div>
 
 	<script src="js/jquery-2.0.3.min.js"></script>
 	<script src="js/animatescroll.js"></script>
-
-	<script type="text/javascript">
-
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-39213747-1']);
-	  _gaq.push(['_setDomainName', 'lgohlke.de']);
-	  _gaq.push(['_setSiteSpeedSampleRate', 100]);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-
-	</script>
-
-
+	
 	<script>
 		$(function() {
 
@@ -332,5 +315,7 @@
 		  });
 		});
 	</script>
+	
+	<script src="js/google-analytics.js"></script>
   </body>
 </html>
