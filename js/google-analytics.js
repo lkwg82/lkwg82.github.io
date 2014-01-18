@@ -58,8 +58,9 @@ $(function() {
 
 		//~ console.debug(selectedText);
 
-		var maxLength = Math.min(10,selectedText.focusNode.length);
-		var snippet = selectedText.focusNode.data.substr(0, maxLength);
+		var nodeText=selectedText.focusNode.data;
+		var maxLength = Math.min(10,nodeText.length);
+		var snippet = nodeText.substr(0, maxLength);
 
 		if ( selectedText.type == "Range" ){
 			track("view",'selected text',snippet + " [" + selectedText + "]");
