@@ -2,8 +2,8 @@
 
 set -e
 
-rsync  -e ssh --delete-excluded \
+rsync  --archive -e ssh --delete-excluded \
 	--exclude .git \
 	--exclude *.py \
 	--exclude *.sh \
-	-vr . www.wirt.lgohlke.de:/srv/htdocs3
+	-vr . www2.wirt.lgohlke.de:/var/www
