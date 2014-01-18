@@ -2,7 +2,7 @@
 
 set -e
 
-rsync  -v --dry-run -e ssh --delete-excluded \
+rsync  -e ssh --delete-excluded \
 	--exclude .git \
 	--exclude *.py \
 	--exclude *.sh \
