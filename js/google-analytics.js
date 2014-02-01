@@ -1,6 +1,8 @@
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-39213747-1']);
-_gaq.push(['_setDomainName', 'lgohlke.de']);
+_gaq.push(['_setDomainName', 'www.lgohlke.de']);
+_gaq.push(['_gat._forceSSL']);
+_gaq.push(['_gat._anonymizeIp']);
 _gaq.push(['_setSiteSpeedSampleRate', 100]);
 _gaq.push(['_trackPageview']);
 
