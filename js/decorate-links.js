@@ -34,8 +34,6 @@ $(function() {
 
 	var supportsOrientationChange = "onorientationchange" in window;
 	if ( supportsOrientationChange ){
-		window.addEventListener(orientationEvent, function() {
-		    alert('HOLY ROTATING SCREENS BATMAN:' + window.orientation + " " + screen.width);
-		}, false);
+		window.addEventListener("orientationchange", function() {resizeVideo();}, false);
 	}
 });
