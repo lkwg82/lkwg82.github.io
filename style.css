@@ -1,4 +1,6 @@
-
+* {
+	word-wrap:break-word;
+}
 
 .row {
 	max-width: inherit;
