@@ -32,8 +32,9 @@ $(function() {
 		resizeVideo();
 	});
 
-	var supportsOrientationChange = "onorientationchange" in window;
-	if ( supportsOrientationChange ){
-		window.addEventListener("orientationchange", function() {resizeVideo();}, false);
-	}
+	// TODO
+	//~ var supportsOrientationChange = "onorientationchange" in window;
+	//~ if ( supportsOrientationChange ){
+		//~ window.addEventListener("orientationchange", function() {resizeVideo();}, false);
+	//~ }
 });
