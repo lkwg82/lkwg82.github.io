@@ -71,6 +71,35 @@ module.exports = function (grunt) {
             ],
           },
         },
+        filerev: {
+          options: {
+            algorithm: 'md5',
+            length: 8
+          },
+          dist: {
+                  expand: true,
+//                  cwd: 'www',
+                  src: [
+                    'www/*.js',
+                    'www/*.css',
+                    'www/img/**/*.{png,jpg,JPG,jpeg,gif,webp,svg}',
+                    'www/font/**/*.ttf'
+                  ]
+              }
+        },
+        filerev_apply: {
+          files: {
+            'www/index.html': 'www/index.html'
+          },
+        },
+        filerev_replace: {
+          options: {
+            assets_root: 'www'
+          },
+          views: {
+            src: 'www/index.html'
+          }
+        } ,
         watch: {
             files: [
 		            'Gruntfile.js',
@@ -82,7 +111,7 @@ module.exports = function (grunt) {
                 'index.html',
             ],
             tasks: [
-                'csslint'
+                'default'
             ],
             options: {
                 spawn: false,
@@ -93,7 +122,8 @@ module.exports = function (grunt) {
         }
     });
 
-
+    grunt.loadNpmTasks('grunt-filerev-apply');
+    grunt.loadNpmTasks('grunt-filerev-replace');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-uncss');
 
@@ -112,6 +142,9 @@ module.exports = function (grunt) {
         'uglify',
         'processhtml',
         'htmlmin',
-	      'copy'
+	      'copy',
+	      'filerev',
+	      'filerev_apply',
+	      'filerev_replace'
     ]);
 };
