@@ -19,6 +19,19 @@ module.exports = function (grunt) {
                 dest: 'tmp/main.css'
             }
         },
+	      criticalcss: {
+            custom: {
+                options: {
+                    url: "index.html",
+                    width: 1200,
+                    height: 800,
+                    outputfile: "tmp/critical.css",
+                    filename: "tmp/main.css", // Using path.resolve( path.join( ... ) ) is a good idea here
+                    buffer: 800*1024,
+                    ignoreConsole: false
+                }
+            }
+        },
         cssmin: {
             dist: {
                 src: 'tmp/main.css',
@@ -111,6 +124,7 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-filerev-replace');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-uncss');
@@ -127,6 +141,7 @@ module.exports = function (grunt) {
         'uncss',
         'concat',
         'cssmin',
+	      'criticalcss',
         'uglify',
         'processhtml',
         'htmlmin',
