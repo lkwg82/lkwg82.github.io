@@ -404,7 +404,7 @@ ul {
 }
 
 #header .nav-container li a {
-  font-family: "Utopia","Georgia",serif;
+  font-family: "Utopia", "Georgia", serif;
   color: #45555f;
   font-size: 1rem;
   text-transform: uppercase;
@@ -457,7 +457,7 @@ ul {
   padding: 5rem 0;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+  font-family: "UtopiaDisplay", "Utopia", "Georgia", serif;
 }
 
 .intro .me {
@@ -511,7 +511,7 @@ ul {
 h2,
 h3,
 h4 {
-  font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+  font-family: "UtopiaDisplay", "Utopia", "Georgia", serif;
 }
 
 h3 {
@@ -538,7 +538,7 @@ h4 {
 #arbeiten .abstract {
   margin-left: 15px;
   line-height: 2.5rem;
-  font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+  font-family: "UtopiaDisplay", "Utopia", "Georgia", serif;
 }
 
 #arbeiten .abstract p {
@@ -580,7 +580,7 @@ h4 {
 }
 
 #curi {
-  font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+  font-family: "UtopiaDisplay", "Utopia", "Georgia", serif;
 }
 
 #curi h3 {
@@ -616,7 +616,7 @@ h4 {
 
 #impressum {
   max-width: 60rem;
-  font-family: "UtopiaDisplay","Utopia","Georgia",serif;
+  font-family: "UtopiaDisplay", "Utopia", "Georgia", serif;
   letter-spacing: 0.1rem;
   margin-bottom: 5rem;
 }
