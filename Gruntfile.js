@@ -3,59 +3,28 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
-        csslint: {
-            test: {
-                options: {
-                    import: 2
-                },
-                src: [
-                    'css/style.css'
-                ]
-            }
-        },
-
+	      clean: ["tmp", "www"],
         uncss: {
             dist: {
                 files: {
-                    'assets/tidy.css': ['index.html']
+                    'tmp/tidy.css': ['index.html']
                 }
             }
         },
-
         concat: {
             dist: {
                 src: [
-                        'assets/tidy.css',
+                        'tmp/tidy.css',
                         'libs/video-js-4.10.2/video-js.css' ],
-                dest: 'assets/main.css'
+                dest: 'tmp/main.css'
             }
         },
-
         cssmin: {
             dist: {
-                src: 'assets/main.css',
-                dest: 'assets/main.min.css'
+                src: 'tmp/main.css',
+                dest: 'www/main.css'
             }
         },
-        processhtml: {
-            dist: {
-                files: {
-                    'index.min.html': ['index.html']
-                }
-            }
-        },
-        htmlmin: {
-            dist: {
-                options: {
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files: {
-                    'index.min2.html': 'index.min.html'
-                }
-            }
-        },
-
         uglify: {
             my_target: {
                 options: {
@@ -63,7 +32,7 @@ module.exports = function (grunt) {
                     mangle: true
                 },
                 files: {
-                    'assets/output.min.js': [
+                    'www/output.js': [
                             'js/jquery-2.0.3.min.js',
 //                            'js/jquery.lazyload.1.9.3.min.js',
                             'js/animatescroll.js',
@@ -74,26 +43,46 @@ module.exports = function (grunt) {
                 }
             }
         },
-
-        shell: {
-            jekyllBuild: {
-                command: 'jekyll build'
-            },
-            jekyllServe: {
-                command: 'jekyll  serve'
+        processhtml: {
+            dist: {
+                files: {
+                    'tmp/index.min.html': ['index.html']
+                }
             }
         },
-
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'www/index.html': 'tmp/index.min.html'
+                }
+            }
+        },
+        copy: {
+          main: {
+            files: [
+              // includes files within path and its sub-directories
+              {expand: true, src: ['img/**'], dest: 'www'},
+              {expand: true, src: ['font/**'], dest: 'www'},
+              {expand: true, src: ['favicon.ico'], dest: 'www'},
+            ],
+          },
+        },
         watch: {
             files: [
+		            'Gruntfile.js',
+		            '.csslintrc',
                 'css/*.css',
                 'js/*.js',
+                '*.json',
                 'libs/**/*',
                 'index.html',
             ],
             tasks: [
-                'default',
-                'shell:jekyllServe'
+                'csslint'
             ],
             options: {
                 spawn: false,
@@ -104,22 +93,25 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-uncss');
+
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // register custom grunt tasks
 
     grunt.registerTask('default', [
+	      'clean',
         'uncss',
         'concat',
         'cssmin',
         'uglify',
         'processhtml',
-        'htmlmin'
-                        ]);
-    grunt.registerTask('test', [ 'csslint' ]);
-    grunt.registerTask('deploy', [ 'concat', 'cssmin', 'shell:jekyllBuild' ])
+        'htmlmin',
+	      'copy'
+    ]);
 };
