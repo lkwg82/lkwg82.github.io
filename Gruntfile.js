@@ -72,13 +72,7 @@ module.exports = function (grunt) {
           },
         },
         filerev: {
-          options: {
-            algorithm: 'md5',
-            length: 8
-          },
           dist: {
-                  expand: true,
-//                  cwd: 'www',
                   src: [
                     'www/*.js',
                     'www/*.css',
@@ -86,11 +80,6 @@ module.exports = function (grunt) {
                     'www/font/**/*.ttf'
                   ]
               }
-        },
-        filerev_apply: {
-          files: {
-            'www/index.html': 'www/index.html'
-          },
         },
         filerev_replace: {
           options: {
@@ -122,7 +111,6 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-filerev-apply');
     grunt.loadNpmTasks('grunt-filerev-replace');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-uncss');
@@ -144,7 +132,6 @@ module.exports = function (grunt) {
         'htmlmin',
 	      'copy',
 	      'filerev',
-	      'filerev_apply',
 	      'filerev_replace'
     ]);
 };
