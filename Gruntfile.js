@@ -34,7 +34,7 @@ module.exports = function (grunt) {
                 files: {
                     'www/output.js': [
                             'js/jquery-2.0.3.min.js',
-//                            'js/jquery.lazyload.1.9.3.min.js',
+                            'js/jquery.lazyload.1.9.3.min.js',
                             'js/animatescroll.js',
                             'js/decorate-links.js',
                             'js/google-analytics.js',
