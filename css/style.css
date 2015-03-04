@@ -25,23 +25,7 @@
     font-family: Utopia, Georgia, serif;
 }
 
-@media (max-width: 750px) {
-    #header .branding {
-        text-align: center;
-        float: none;
-    }
-}
 
-@media (min-width: 750px) {
-    .teaser {
-       background: url(img/teaser_4x1.JPG) no-repeat center center;
-         -webkit-background-size: cover;
-         -moz-background-size: cover;
-         -o-background-size: cover;
-         background-size: cover;
-         height: 500px;
-    }
-}
 
 #header .nav-container {
     float: left;
@@ -289,4 +273,32 @@ h3 {
     text-align: center;
     font-size: x-small;
     color: grey;
+}
+@media (max-width: 750px) {
+    h2,#header .branding {
+        text-align: center;
+        float: none;
+    }
+    .nav-container{
+        display: none
+    }
+    #blog {
+            text-align: center;
+            font-size: 2rem;
+    }
+}
+
+@media (min-width: 750px) {
+    .teaser {
+       background: url(img/teaser_4x1.JPG) no-repeat center center;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         height: 500px;
+    }
+
+    #blog {
+    display:none;
+    }
 }
