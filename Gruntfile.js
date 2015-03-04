@@ -90,7 +90,7 @@ module.exports = function (grunt) {
                     'www/*.js',
                     'www/*.css',
                     'www/img/**/*.{png,jpg,JPG,jpeg,gif,webp,svg}',
-                    'www/font/**/*.ttf'
+                    'www/font/*'
                   ]
               }
         },
