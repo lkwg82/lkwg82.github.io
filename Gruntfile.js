@@ -119,7 +119,7 @@ module.exports = function (grunt) {
                 'default'
             ],
             options: {
-                spawn: false,
+                spawn: true,
                 interrupt: true,
                 atBegin: true,
                 livereload: true
