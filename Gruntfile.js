@@ -98,6 +98,9 @@ module.exports = function (grunt) {
           options: {
             assets_root: 'www'
           },
+          compiled_assets: {
+            src: 'www/*.{css,js}'
+          },
           views: {
             src: 'www/index.html'
           }
