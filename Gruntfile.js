@@ -2,6 +2,7 @@ module.exports = function (grunt) {
     // load time-grunt and all grunt plugins found in the package.json
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
 	      clean: ["tmp", "www"],
         uncss: {
@@ -15,24 +16,15 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                         'tmp/tidy.css',
-                        'libs/video-js-4.10.2/video-js.css' ],
+                        'bower_components/video-js/dist/video-js/video-js.min.css'
+                ],
                 dest: 'tmp/main.css'
             }
         },
-	      criticalcss: {
-            custom: {
-                options: {
-                    url: "index.html",
-                    width: 1200,
-                    height: 800,
-                    outputfile: "tmp/critical.css",
-                    filename: "tmp/main.css", // Using path.resolve( path.join( ... ) ) is a good idea here
-                    buffer: 800*1024,
-                    ignoreConsole: false
-                }
-            }
-        },
         cssmin: {
+            options: {
+              keepSpecialComments: 0
+            },
             dist: {
                 src: 'tmp/main.css',
                 dest: 'www/main.css'
@@ -46,12 +38,12 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'www/output.js': [
-                            'js/jquery-2.0.3.min.js',
-                            'js/jquery.lazyload.1.9.3.min.js',
-                            'js/animatescroll.js',
+                            'bower_components/jquery/dist/jquery.min.js',
+                            'bower_components/jquery_lazyload/js/jquery.lazyload.js',
+                            'bower_components/animatescroll/animatescroll.js',
                             'js/decorate-links.js',
                             'js/google-analytics.js',
-                            'libs/video-js-4.10.2/video.js'
+                            'bower_components/video-js/dist/video-js/video.js'
                     ]
                 }
             }
@@ -79,7 +71,7 @@ module.exports = function (grunt) {
             files: [
               // includes files within path and its sub-directories
               {expand: true, src: ['img/**'], dest: 'www'},
-              {expand: true, src: ['font/**'], dest: 'www'},
+              {expand: true, src: ['bower_components/video-js/dist/video-js/font/**'], dest: 'www/font/', flatten: true},
               {expand: true, src: ['favicon.ico'], dest: 'www'},
             ],
           },
@@ -122,12 +114,27 @@ module.exports = function (grunt) {
                 spawn: true,
                 interrupt: true,
                 atBegin: true,
-                livereload: true
+                livereload: false
             }
+        }   ,
+        devUpdate: {
+          main: {
+            options: {
+              updateType: 'report', //just report outdated packages
+              reportUpdated: false, //don't report up-to-date packages
+              semver: true, //stay within semver when updating
+              packages: {
+                devDependencies: true, //only check for devDependencies
+                dependencies: false
+              },
+              packageJson: null, //use matchdep default findup to locate package.json
+              reportOnlyPkgs: [] //use updateType action on all packages
+            }
+          }
         }
     });
 
-    grunt.loadNpmTasks('grunt-criticalcss');
+    grunt.loadNpmTasks('grunt-dev-update');
     grunt.loadNpmTasks('grunt-filerev-replace');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-uncss');
@@ -144,7 +151,6 @@ module.exports = function (grunt) {
         'uncss',
         'concat',
         'cssmin',
-	      'criticalcss',
         'uglify',
         'processhtml',
         'htmlmin',

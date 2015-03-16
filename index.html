@@ -3,12 +3,12 @@
 <head>
     <title>Lars K.W. Gohlke</title>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="HandheldFriendly" content="true"/>
 
     <!-- build:css main.css -->
-    <link rel="stylesheet" type="text/css" href="libs/bootstrap/3.0.3/css/bootstrap.min.css" media="all"/>
-    <link rel="stylesheet" type="text/css" href="libs/video-js-4.10.2/video-js.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/video-js/dist/video-js/video-js.min.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
     <!-- /build -->
 
@@ -69,7 +69,7 @@
                 aufwendigen statistischen Verfahren (z.B. Delta Debugging) zu entwickeln. Der Gegenentwurf beinhaltete
                 die Modellierung einer Metrik zur Bestimmung der signifikantesten Tests.</p>
             <span class="info">Noten: 1.0 + 1.9 | Prototyp ver&ouml;ffentlicht unter <a
-                    href="http://code.google.com/p/metricanalyzer/">http://code.google.com/p/metricanalyzer/</a></span>
+                    href="https://github.com/lkwg82/metricanalyzer/">https://github.com/lkwg82/metricanalyzer</a></span>
         </div>
         <div class="col-sm-4 downloads">
             <ul>
@@ -333,7 +333,20 @@
 <div class="page footer main_content">
     <span class="version">last changed 2015-03-04 22:47:26 +0100 54ce5dd53a257ee69a09fea9c9dae8d157d12704</span>
 </div>
+<!-- build:js output.js -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery_lazyload/js/jquery.lazyload.js"></script>
+<script src="bower_components/animatescroll/animatescroll.js"></script>
+<script src="js/decorate-links.js"></script>
+<script src="js/google-analytics.js"></script>
+<script src="bower_components/video-js/dist/video-js/video.js"></script>
+<!-- /build -->
 
-<script src="output.js" async></script>
+<script>
+    if ( (typeof performance !== 'undefined') && (typeof performance.timing !== 'undefined')){
+        var t = performance.timing;
+        console.log(t.responseEnd-t.fetchStart);
+    }
+</script>
 </body>
 </html>
