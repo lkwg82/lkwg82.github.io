@@ -15,7 +15,7 @@
     <link rel="canonical" href="http://www.lgohlke.de"/>
 </head>
 <body>
-<div id="header" class="page">
+<div id="header">
     <div class="header-wrapper">
         <div class="branding">Lars K.W. Gohlke</div>
         <div class="nav-container">
@@ -28,24 +28,22 @@
         </div>
     </div>
     <div class="teaser trackView" id="teaser">
+        <!-- background image on desktop -->
     </div>
 </div>
-<div class="page row intro main_content trackView" id="me">
-    <div class="col-md-4 me">
-        <img src="img/me3.jpg" width="240" height="317" alt="Lars. K.W. Gohlke"/>
+<div class="row intro main_content trackView" id="me">
+    <div class="col-sm-5 me">
+        <img src="img/me3.jpg" height="317" alt="Lars. K.W. Gohlke"/>
     </div>
-    <div class="col-md-8 welcome">
-        <strong>Willkommen</strong>
-
-        <p>... zu meinem Beitrag f&uuml;r unsere Netzkultur ;)</p>
-
-        <strong>Welcome</strong>
-
-        <p>... to my contribution to our lively internet culture</p>
-
-        <strong>Selamat datang</strong>
-
-        <p>... bersahaja hanya selamat datang ;)</p>
+    <div class="col-sm-7">
+        <div class="welcome">
+            <strong>Willkommen</strong>
+            <p>... zu meinem Beitrag f&uuml;r unsere Netzkultur ;)</p>
+            <strong>Welcome</strong>
+            <p>... to my contribution to our lively internet culture</p>
+            <strong>Selamat datang</strong>
+            <p>... bersahaja hanya selamat datang ;)</p>
+        </div>
         <div class="socialmedia">
             <a href="http://github.com/lkwg82"><img src="img/basic_social/colored/32/square/github_alt.png" width="32" alt="Github"></a>
             <a href="http://blog.lgohlke.de"><img src="img/basic_social/colored/32/square/blogger.png" width="32" alt="Blog"></a>
@@ -57,7 +55,7 @@
     </div>
 </div>
 
-<div class="page row main_content border-top" id="blog">
+<div class="row main_content border-top" id="blog">
     <h2>Blog</h2>
     Sporadisch blogge ich <a href="http://blog.lgohlke.de">hier</a>.
 </div>
@@ -75,44 +73,35 @@
             <p>Thema der vorliegenden Arbeit war die Analyse und Erarbeitung eines Konzeptes zur Verbesserung der
                 statischen Fehlereingrenzung. Dabei ging es darum, einen leichtgewichtigen heuristischen Gegenentwurf zu
                 aufwendigen statistischen Verfahren (z.B. Delta Debugging) zu entwickeln. Der Gegenentwurf beinhaltete
-                die Modellierung einer Metrik zur Bestimmung der signifikantesten Tests.</p>
-            <span class="info">Noten: 1.0 + 1.9 | Prototyp ver&ouml;ffentlicht unter <a
-                    href="https://github.com/lkwg82/metricanalyzer/">https://github.com/lkwg82/metricanalyzer</a></span>
+                die Modellierung einer Metrik zur Bestimmung der signifikantesten Tests.
+            </p>
+            <p class="info">Noten: 1.0 + 1.9</p>
         </div>
-        <div class="col-sm-4 downloads">
-            <ul>
-                <li><a href="/download/projects/masterthesis/Masterarbeit_Gohlke_v20120423.pdf">Download
-                    Masterarbeit</a></li>
-                <li><a href="/download/projects/masterthesis/MasterPr%c3%a4sentation.pdf">Download Pr&auml;sentation</a>
-                </li>
-                <li><a href="/download/projects/masterthesis/MasterPoster.pdf">Download Poster</a></li>
-            </ul>
+        <div class="col-sm-3 downloads">
+            <a href="https://github.com/lkwg82/metricanalyzer/">Code</a>
+            <a href="/download/projects/masterthesis/Masterarbeit_Gohlke_v20120423.pdf">Masterarbeit</a>
+            <a href="/download/projects/masterthesis/MasterPr%c3%a4sentation.pdf">Pr&auml;sentation</a>
+            <a href="/download/projects/masterthesis/MasterPoster.pdf">Poster</a>
         </div>
     </div>
     <div id="pre-masterthesis" class="item trackView">
         <div class="col-md-12">
             <h4>Studienarbeit - 2010.03.</h4>
-
             <h3>Qualit&auml;tsmanagement mit Continuous Integration</h3>
         </div>
         <div class="col-sm-8 abstract">
             <p>Wie weit l&auml;&szlig;t sich das Konzept der kontinuierlichen Integration in der Praxis wirklich
                 umsetzen? Dieser zentralen Frage wurde in der Studienarbeit nachgegangen.</p>
-            <span class="info">Note: 1.0</span>
+            <p class="info">Note: 1.0</p>
         </div>
-        <div class="col-sm-4 downloads">
-            <ul>
-                <li><a href="/download/projects/studienarbeit/Studienarbeit_Gohlke_20042002.pdf">Download
-                    Studienarbeit</a></li>
-                <li><a href="/download/projects/studienarbeit/Abschlusspraesentation-Studienarbeit-hudson.pdf">Download
-                    Pr&auml;sentation</a></li>
-            </ul>
+        <div class="col-sm-3 downloads">
+            <a href="/download/projects/studienarbeit/Studienarbeit_Gohlke_20042002.pdf">Studienarbeit</a>
+            <a href="/download/projects/studienarbeit/Abschlusspraesentation-Studienarbeit-hudson.pdf">Pr&auml;sentation</a>
         </div>
     </div>
     <div id="diplomathesis" class="item trackView">
         <div class="col-md-12">
             <h4>Diplomarbeit - 2008.08.</h4>
-
             <h3>SOA f&uuml;r Multi-Messaging Integrationskonzept am Beispiel Skype</h3>
         </div>
         <div class="col-sm-8 abstract">
@@ -120,24 +109,21 @@
                 Verwendung von Enterprise Integration Pattern am Beispiel von Multi-Messaging mit Skype. Aufbauend auf
                 einer SOA konnten weiterhin Aspekte zur L&ouml;sung der Skalierbarkeit und Robustheit eines Dienstes
                 beschrieben und die Aufl&ouml;sung von Abh&auml;ngigkeiten unter den Diensten betrachtet werden.</p>
-            <span class="info">Noten: 1.0 + 1.3</span>
+            <p class="info">Noten: 1.0 + 1.3</p>
         </div>
-        <div class="col-sm-4 downloads">
-            <ul>
-                <li><a href="/download/projects/diplomarbeit/DiplomarbeitGohlke_SOA_SKYPE_v20080820.pdf">Download
-                    Diplomarbeit</a></li>
-                <li><a href="/download/projects/diplomarbeit/DiplomPraesentation.pdf">Download Pr&auml;sentation</a>
-                </li>
-            </ul>
+        <div class="col-sm-3 downloads">
+            <a href="/download/projects/diplomarbeit/DiplomarbeitGohlke_SOA_SKYPE_v20080820.pdf">Diplomarbeit</a>
+            <a href="/download/projects/diplomarbeit/DiplomPraesentation.pdf">Pr&auml;sentation</a>
         </div>
     </div>
     <div id="intern" class="item trackView">
         <div class="col-md-12">
-            <h3>Auslandspraktikum - 2006.08.</h3>
+            <h4>Auslandspraktikum - 2006.08.</h4>
+            <h3>Indonesien - Am anderen Ende der Welt</h3>
         </div>
-        <div class="col-md-8 abstract">
+        <div class="col-sm-8 abstract">
             <video id="my_video_1" class="video-js vjs-default-skin" controls
-                   preload="none" width="640" height="464" poster="img/intern_sgu2_small.jpg"
+                   preload="none" width="auto" height="auto" poster="img/intern_sgu2_small.jpg"
                    data-setup="{}">
                 <source src="/img/intro.mp4" type='video/mp4'>
                 <source src="/img/intro.webm" type="video/webm">
@@ -148,21 +134,17 @@
                     top: 40%;
                     width: 25%;
                     height: 25%;
-                    font-size: 4em;
-                    border: 0;
                 }
             </style>
         </div>
-        <div class="col-md-4 downloads">
-            <ul>
-                <li><a href="/download/studium/praktikums_vortrag.pdf">Download Vortrag</a></li>
-                <li><a href="/download/studium/praktikums_report.pdf">Download Bericht</a></li>
-                <li><a href="http://larsindo.wordpress.com/">Visit Blog</a></li>
-            </ul>
+        <div class="col-sm-3 downloads">
+            <a href="/download/studium/praktikums_vortrag.pdf">Vortrag</a>
+            <a href="/download/studium/praktikums_report.pdf">Bericht</a>
+            <a href="http://larsindo.wordpress.com/">Blog</a>
         </div>
     </div>
 </div>
-<div class="page row main_content border-top" id="curi">
+<div class="row main_content border-top" id="curi">
     <h2>Curriculum Vitae</h2>
 
     <div id="job" class="trackView">
@@ -176,7 +158,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">07.2007 - 05.2012</div>
+            <div class="col-xs-4">07.2007 <span class="break">&ndash;</span> 05.2012</div>
             <div class="col-xs-8">
                 <span>Freiberufl. T&auml;tigkeit als Dozent f&uuml;r Linux (LPI)</span>
 
@@ -191,7 +173,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">01.2011 &ndash; 03.2012</div>
+            <div class="col-xs-4">01.2011 <span class="break">&ndash;</span> 03.2012</div>
             <div class="col-xs-8">
                 <span>QA Engineer (<a href="http://www.spreadshirt.de/">Sprd.Net AG</a>)</span>
                 <ul>
@@ -201,7 +183,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">06.2010 &ndash; 12.2010</div>
+            <div class="col-xs-4">06.2010 <span class="break">&ndash;</span> 12.2010</div>
             <div class="col-xs-8">
                 <span>Freiberufl. T&auml;tigkeit als C&sharp; Entwickler/Architekt (<a href="http://www.gfnmediber.de/">gfnmediber</a>)</span>
 
@@ -209,7 +191,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">01.2010 - 06.2010</div>
+            <div class="col-xs-4">01.2010 <span class="break">&ndash;</span> 06.2010</div>
             <div class="col-xs-8">
                 <span>Freiberufl. T&auml;tigkeit als JEE Entwickler/Architekt</span>
 
@@ -218,7 +200,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">01.2010 - 06.2010</div>
+            <div class="col-xs-4">01.2010 <span class="break">&ndash;</span> 06.2010</div>
             <div class="col-xs-8">
                 <span>wissenschaftlicher Mitarbeiter an der FH Brandenburg (Projektmitarbeiter)</span>
                 <ul>
@@ -231,7 +213,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">09.2006 - 01.2007</div>
+            <div class="col-xs-4">09.2006 <span class="break">&ndash;</span> 01.2007</div>
             <div class="col-xs-8">
                 <span>Praxissemester in Jakarta/Indonesien an der <a href="http://www.sgu.ac.id/">SGU</a></span>
                 <ul>
@@ -244,7 +226,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">03.2004 - 08.2004</div>
+            <div class="col-xs-4">03.2004 <span class="break">&ndash;</span> 08.2004</div>
             <div class="col-xs-8">
                 <span>Betreuungsassistent in der Behindertenhilfe des Bl&uuml;tenbergverbundes (<a
                         href="http://www.lobetal.de/INTERNET/unsere-angebote/behindertenhilfe/Barnim-Eberswalde/EW/index.html">M&uuml;llerberg</a>)</span>
@@ -253,13 +235,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">02.2003 - 10.2003</div>
+            <div class="col-xs-4">02.2003 <span class="break">&ndash;</span> 10.2003</div>
             <div class="col-xs-8">
                 <span>Arbeit als Zivildienstleistender und pflegerische Hilfskraft im Pflegewohnheim &bdquo;Zur Heegerm&uuml;hle&ldquo;</span>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">10.2002 - 01.2003</div>
+            <div class="col-xs-4">10.2002 <span class="break">&ndash;</span> 01.2003</div>
             <div class="col-xs-8">
                 <span>Grundwehrdienstleistender in Torgelow</span>
             </div>
@@ -280,7 +262,7 @@
     <div id="scholar" class="table trackView">
         <div class="col-xs-12"><h3>Schule/Studium</h3></div>
         <div class="row">
-            <div class="col-xs-4">09.2008 - 05.2012</div>
+            <div class="col-xs-4">09.2008 <span class="break">&ndash;</span> 05.2012</div>
             <div class="col-xs-8">
                 <span>Masterstudent der FH Brandenburg</span>
 
@@ -290,7 +272,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">09.2004 - 08.2008</div>
+            <div class="col-xs-4">09.2004 <span class="break">&ndash;</span> 08.2008</div>
             <div class="col-xs-8">
                 <span>Informatik an der FH Brandenburg (Diplom - &quot;sehr gut&quot; )</span>
 
@@ -298,7 +280,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-4">10.2003 - 03.2004</div>
+            <div class="col-xs-4">10.2003 <span class="break">&ndash;</span> 03.2004</div>
             <div class="col-xs-8">
                 <span>Informatikstudent der BTU in Cottbus</span>
             </div>
@@ -311,8 +293,7 @@
         </div>
     </div>
 </div>
-<div class="main_content border-top" style="margin-bottom:0">&nbsp;</div>
-<div class="page row main_content trackView" id="impressum">
+<div class="row main_content trackView border-top" id="impressum">
     <div class="col-sm-4">
         <h2>Impressum</h2>
     </div>
@@ -337,7 +318,7 @@
         </div>
     </div>
 </div>
-<div class="page footer main_content">
+<div class="footer main_content">
     <span class="version">last changed 2015-03-20 22:55:46 +0100 93f6c3cc1b683b938223f12165655f4e2409825d</span>
 </div>
 <!-- build:js output.js -->

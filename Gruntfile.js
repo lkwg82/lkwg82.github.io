@@ -15,8 +15,9 @@ module.exports = function(grunt) {
 		concat: {
 			dist: {
 				src: [
-					'tmp/tidy.css',
-					'bower_components/video-js/dist/video-js/video-js.min.css'
+					'bower_components/bootstrap/dist/css/bootstrap.css',
+					'bower_components/video-js/dist/video-js/video-js.min.css',
+					'css/style.css'
 				],
 				dest: 'tmp/main.css'
 			}
@@ -165,7 +166,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', [
 		'clean',
-		'uncss',
+//		'uncss',
 		'concat',
 		'cssmin',
 		'uglify',
