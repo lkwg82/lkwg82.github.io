@@ -37,6 +37,7 @@ $(function() {
 				}
 
 				track('latency', 'average', Math.round(latencyTotal / count));
+				track('resources', 'count', count);
 			}
 		}
 	}
