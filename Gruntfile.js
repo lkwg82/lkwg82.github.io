@@ -3,6 +3,8 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
+    var mozjpeg = require('imagemin-mozjpeg');
+
     grunt.initConfig({
         clean: ["tmp", "www"],
         uncss: {
@@ -56,7 +58,8 @@ module.exports = function(grunt) {
                         'js/decorate-links.js',
                         'js/google-analytics.js',
                         'js/resourcetiming.js'
-                    ]
+                    ],
+                    'tmp/loadCSS.js': 'bower_components/loadcss/loadCSS.js'
                 }
             }
         },
@@ -89,9 +92,29 @@ module.exports = function(grunt) {
                         {
                             pattern: '<script src="output.js"></script>',
                             replacement: '<script src="output.js" async></script>'
+                        }, {
+                            pattern: /<link rel="stylesheet" href="(main.css)">/,
+                            replacement: '<script> loadCSS("$1"); </script>'
                         }
                     ]
                 }
+            }
+        },
+        imagemin: { // Task
+            static: { // Target
+                options: { // Target options
+                    optimizationLevel: 7,
+                    svgoPlugins: [{
+                        removeViewBox: false
+                    }],
+                    use: [mozjpeg()]
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['**/*.{png,jpg,gif,JPG}'],
+                    dest: 'tmp/img/'
+                }]
             }
         },
         copy: {
@@ -100,10 +123,10 @@ module.exports = function(grunt) {
                     // includes files within path and its sub-directories
                     {
                         expand: true,
+                        cwd: 'tmp/',
                         src: ['img/**'],
                         dest: 'www'
-                    },
-                    {
+                    }, {
                         expand: true,
                         src: ['favicon.ico'],
                         dest: 'www'
@@ -178,12 +201,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-dev-update');
     grunt.loadNpmTasks('grunt-filerev-replace');
+    grunt.loadNpmTasks('grunt-inline-images');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-uncss');
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // register custom grunt tasks
@@ -198,6 +223,7 @@ module.exports = function(grunt) {
         'processhtml',
         'htmlmin',
         'string-replace',
+        'imagemin',
         'copy',
         'filerev',
         'filerev_replace'
