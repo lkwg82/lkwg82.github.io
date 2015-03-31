@@ -52,7 +52,6 @@ module.exports = function(grunt) {
                 files: {
                     'www/output.js': [
                         'bower_components/jquery/dist/jquery.min.js',
-                        'bower_components/jquery_lazyload/js/jquery.lazyload.js',
                         'bower_components/animatescroll/animatescroll.js',
                         'js/decorate-links.js',
                         'js/google-analytics.js',
@@ -71,7 +70,7 @@ module.exports = function(grunt) {
         htmlmin: {
             dist: {
                 options: {
-                    removeComments: false,
+                    removeComments: true,
                     collapseWhitespace: false
                 },
                 files: {
