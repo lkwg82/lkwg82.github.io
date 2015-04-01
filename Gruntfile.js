@@ -6,21 +6,12 @@ module.exports = function(grunt) {
     var mozjpeg = require('imagemin-mozjpeg');
 
     grunt.initConfig({
-        clean: ["tmp", "www"],
+        clean: ["www"],
         uncss: {
             dist: {
                 files: {
-                    'tmp/tidy.css': ['index.html']
+                    'www/tidy.css': ['index.html']
                 }
-            }
-        },
-        concat: {
-            dist: {
-                src: [
-                    'bower_components/bootstrap/dist/css/bootstrap.css',
-                    'css/style.css'
-                ],
-                dest: 'tmp/main.css'
             }
         },
         criticalcss: {
@@ -29,8 +20,8 @@ module.exports = function(grunt) {
                     url: "index.html",
                     width: 1200,
                     height: 800,
-                    outputfile: "tmp/critical.css",
-                    filename: "tmp/main.css", // Using path.resolve( path.join( ... ) ) is a good idea here
+                    outputfile: "www/critical.css",
+                    filename: "www/tidy.css", // Using path.resolve( path.join( ... ) ) is a good idea here
                     buffer: 800 * 1024,
                     ignoreConsole: false
                 }
@@ -41,7 +32,7 @@ module.exports = function(grunt) {
                 keepSpecialComments: 0
             },
             dist: {
-                src: 'tmp/tidy.css',
+                src: 'www/tidy.css',
                 dest: 'www/main.css'
             }
         },
@@ -59,14 +50,14 @@ module.exports = function(grunt) {
                         'js/google-analytics.js',
                         'js/resourcetiming.js'
                     ],
-                    'tmp/loadCSS.js': 'bower_components/loadcss/loadCSS.js'
+                    'www/loadCSS.js': 'bower_components/loadcss/loadCSS.js'
                 }
             }
         },
         processhtml: {
             dist: {
                 files: {
-                    'tmp/index.min.html': ['index.html']
+                    'www/index.html': ['index.html']
                 }
             }
         },
@@ -74,10 +65,10 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     removeComments: true,
-                    collapseWhitespace: false
+                    collapseWhitespace: true
                 },
                 files: {
-                    'www/index.html': 'tmp/index.min.html'
+                    'www/index.html': 'www/index.html'
                 }
             }
         },
@@ -100,9 +91,25 @@ module.exports = function(grunt) {
                 }
             }
         },
-        imagemin: { // Task
-            static: { // Target
-                options: { // Target options
+        copy: {
+            main: {
+                files: [
+                    // includes files within path and its sub-directories
+                    {
+                        expand: true,
+                        src: ['img/**'],
+                        dest: 'www'
+                    }, {
+                        expand: true,
+                        src: ['favicon.ico'],
+                        dest: 'www'
+                    },
+                ],
+            },
+        },
+        imagemin: {
+            static: {
+                options: {
                     optimizationLevel: 7,
                     svgoPlugins: [{
                         removeViewBox: false
@@ -113,26 +120,9 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'img/',
                     src: ['**/*.{png,jpg,gif,JPG}'],
-                    dest: 'tmp/img/'
+                    dest: 'www/img/'
                 }]
             }
-        },
-        copy: {
-            main: {
-                files: [
-                    // includes files within path and its sub-directories
-                    {
-                        expand: true,
-                        cwd: 'tmp/',
-                        src: ['img/**'],
-                        dest: 'www'
-                    }, {
-                        expand: true,
-                        src: ['favicon.ico'],
-                        dest: 'www'
-                    },
-                ],
-            },
         },
         filerev: {
             dist: {
@@ -158,11 +148,9 @@ module.exports = function(grunt) {
         watch: {
             files: [
                 'Gruntfile.js',
-                '.csslintrc',
                 'css/*.css',
                 'js/*.js',
                 '*.json',
-                'libs/**/*',
                 'index.html',
             ],
             tasks: [
@@ -216,15 +204,14 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'clean',
         'uncss',
-        'concat',
         'criticalcss',
         'cssmin',
         'uglify',
         'processhtml',
         'htmlmin',
         'string-replace',
-        'imagemin',
         'copy',
+        'imagemin',
         'filerev',
         'filerev_replace'
     ]);
