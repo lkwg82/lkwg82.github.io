@@ -124,6 +124,11 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        inline: {
+                dist: {
+                    src: 'www/index.html',
+                }
+            }    ,
         filerev: {
             dist: {
                 src: [
@@ -189,7 +194,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-dev-update');
     grunt.loadNpmTasks('grunt-filerev-replace');
-    grunt.loadNpmTasks('grunt-inline-images');
+    grunt.loadNpmTasks('grunt-inline');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-uncss');
 
@@ -212,6 +217,7 @@ module.exports = function(grunt) {
         'string-replace',
         'copy',
         'imagemin',
+        'inline',
         'filerev',
         'filerev_replace'
     ]);
