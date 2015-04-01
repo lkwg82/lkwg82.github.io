@@ -14,19 +14,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-//        criticalcss: {
-//            custom: {
-//                options: {
-//                    url: "index.html",
-//                    width: 1200,
-//                    height: 800,
-//                    outputfile: "www/critical.css",
-//                    filename: "www/tidy.css", // Using path.resolve( path.join( ... ) ) is a good idea here
-//                    buffer: 800 * 1024,
-//                    ignoreConsole: false
-//                }
-//            }
-//        },
         cssmin: {
             options: {
                 keepSpecialComments: 0
@@ -191,7 +178,6 @@ module.exports = function(grunt) {
         }
     });
 
-//    grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-dev-update');
     grunt.loadNpmTasks('grunt-filerev-replace');
     grunt.loadNpmTasks('grunt-inline');
@@ -209,7 +195,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'clean',
         'uncss',
-//        'criticalcss',
         'cssmin',
         'uglify',
         'processhtml',
