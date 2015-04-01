@@ -3,6 +3,6 @@
 set -e
 
 npm install
-grunt
+#grunt
 
-rsync  --archive -e ssh --delete -vr www www2.wirt.lgohlke.de:/var/www
+rsync  --archive -e ssh --delete-during -vr www www2.wirt.lgohlke.de:/var/www
