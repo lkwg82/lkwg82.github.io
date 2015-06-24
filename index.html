@@ -14,7 +14,7 @@
     <link rel="canonical" href="http://www.lgohlke.de"/>
 </head>
 <body>
-<div id="header">
+<div id="header" class="no-print">
     <div class="header-wrapper">
         <div class="branding">Lars K.W. Gohlke</div>
         <div class="nav-container">
@@ -35,7 +35,7 @@
         <img src="img/me.jpg" height="317" alt="Lars. K.W. Gohlke"/>
     </div>
     <div class="col-sm-7">
-        <div class="welcome">
+        <div class="welcome no-print">
             <strong>Willkommen</strong>
             <p>... zu meinem Beitrag f&uuml;r unsere Netzkultur ;)</p>
             <strong>Welcome</strong>
@@ -43,18 +43,24 @@
             <strong>Selamat datang</strong>
             <p>... bersahaja hanya selamat datang ;)</p>
         </div>
+        <div class="print">
+            <div class="branding">Lars K.W. Gohlke</div>
+        </div>
         <div class="socialmedia">
             <a href="https://github.com/lkwg82"><img src="img/basic_social/colored/32/square/github_alt.png?__inline=true" width="32" alt="Github"></a>
             <a href="http://blog.lgohlke.de"><img src="img/basic_social/colored/32/square/blogger.png?__inline=true" width="32" alt="Blog"></a>
             <a href="https://twitter.com/lkwg82"><img src="img/basic_social/colored/32/square/twitter.png?__inline=true" width="32" alt="Twitter"></a>
             <a href="https://www.xing.com/profile/Lars_Gohlke"><img src="img/basic_social/colored/32/square/xing.png?__inline=true" width="32" alt="Xing"></a>
-            <a href="https://www.linkedin.com/pub/lars-k-w-gohlke/bb/210/38b"><img src="img/basic_social/colored/32/square/linkedin.png?__inline=true" width="32" alt="Email"></a>
-            <a href="https://www.facebook.com/lars.s.gohlke"><img src="img/basic_social/colored/32/square/facebook.png?__inline=true" width="32" alt="Facebook"></a>
+            <a href="https://de.linkedin.com/in/javasoftwarecraftman"><img src="img/basic_social/colored/32/square/linkedin.png?__inline=true" width="32" alt="Email"></a>
+            <a href="mailto:lkwg82@gmx.de"><img src="img/basic_social/colored/32/square/email.png?__inline=true" width="32" alt="email"></a>
         </div>
+    </div>
+    <div class="print text-center">
+        <div class="print-link">online: www.lgohlke.de</div>
     </div>
 </div>
 
-<div class="row main_content border-top" id="blog">
+<div class="row main_content border-top no-print" id="blog">
     <h2>Blog</h2>
     Sporadisch blogge ich <a href="http://blog.lgohlke.de">hier</a>.
 </div>
@@ -76,7 +82,7 @@
             </p>
             <p class="info">Noten: 1.0 + 1.8</p>
         </div>
-        <div class="col-sm-3 downloads">
+        <div class="col-sm-3 downloads no-print">
             <a href="https://github.com/lkwg82/metricanalyzer/">Code</a>
             <a href="/download/projects/masterthesis/Masterarbeit_Gohlke_v20120423.pdf">Masterarbeit</a>
             <a href="/download/projects/masterthesis/MasterPr%c3%a4sentation.pdf">Pr&auml;sentation</a>
@@ -93,7 +99,7 @@
                 umsetzen? Dieser zentralen Frage wurde in der Studienarbeit nachgegangen.</p>
             <p class="info">Note: 1.0</p>
         </div>
-        <div class="col-sm-3 downloads">
+        <div class="col-sm-3 downloads no-print">
             <a href="/download/projects/studienarbeit/Studienarbeit_Gohlke_20042002.pdf">Studienarbeit</a>
             <a href="/download/projects/studienarbeit/Abschlusspraesentation-Studienarbeit-hudson.pdf">Pr&auml;sentation</a>
         </div>
@@ -110,7 +116,7 @@
                 beschrieben und die Aufl&ouml;sung von Abh&auml;ngigkeiten unter den Diensten betrachtet werden.</p>
             <p class="info">Noten: 1.0 + 1.3</p>
         </div>
-        <div class="col-sm-3 downloads">
+        <div class="col-sm-3 downloads no-print">
             <a href="/download/projects/diplomarbeit/DiplomarbeitGohlke_SOA_SKYPE_v20080820.pdf">Diplomarbeit</a>
             <a href="/download/projects/diplomarbeit/DiplomPraesentation.pdf">Pr&auml;sentation</a>
         </div>
@@ -121,13 +127,14 @@
             <h3>Indonesien - Am anderen Ende der Welt</h3>
         </div>
         <div class="col-sm-8 abstract">
-            <video id="my_video_1" class="video" controls
+            <img src="img/intern_sgu2.jpg" class="print" alt="Praxissemester an der SGU in Indonesien"/>
+            <video id="my_video_1" class="video no-print" controls
                    preload="none" width="640" height="300" poster="img/intern_sgu_small.jpg">
                 <source src="/img/intro.mp4" type='video/mp4'>
                 <source src="/img/intro.webm" type="video/webm">
             </video>
         </div>
-        <div class="col-sm-3 downloads">
+        <div class="col-sm-3 downloads no-print">
             <a href="/download/studium/praktikums_vortrag.pdf">Vortrag</a>
             <a href="/download/studium/praktikums_report.pdf">Bericht</a>
             <a href="http://larsindo.wordpress.com/">Blog</a>
@@ -185,7 +192,7 @@
         <div class="row">
             <div class="col-xs-4">06.2010 <span class="break">&ndash;</span> 12.2010</div>
             <div class="col-xs-8">
-                <span>Freiberufl. T&auml;tigkeit als C&sharp; Entwickler/Architekt (<a href="http://www.gfnmediber.de/">gfnmediber</a>)</span>
+                <span>Freiberufl. T&auml;tigkeit als C&sharp; Entwickler/Architekt (gfnmediber)</span>
 
                 <p>eingebettete A/V P2P Kommunikation auf Basis von DirectShow</p>
             </div>
@@ -228,8 +235,8 @@
         <div class="row">
             <div class="col-xs-4">03.2004 <span class="break">&ndash;</span> 08.2004</div>
             <div class="col-xs-8">
-                <span>Betreuungsassistent in der Behindertenhilfe des Bl&uuml;tenbergverbundes (<a
-                        href="http://www.lobetal.de/INTERNET/unsere-angebote/behindertenhilfe/Barnim-Eberswalde/EW/index.html">M&uuml;llerberg</a>)</span>
+                <span>Betreuungsassistent in der Behindertenhilfe des Bl&uuml;tenbergverbundes <span class="no-print">(<a
+                        href="http://www.lobetal.de/INTERNET/unsere-angebote/behindertenhilfe/Barnim-Eberswalde/EW/index.html">M&uuml;llerberg</a>)</span></span>
 
                 <p>eigenverantwortliche Betreuung einer 16k&ouml;pfigen Bewohnergruppe mit dem Krankheitsbild &bdquo;Schizophrenie&ldquo;</p>
             </div>
@@ -295,13 +302,12 @@
 </div>
 <div class="row main_content trackView border-top" id="impressum">
     <div class="col-sm-4">
-        <h2>Impressum</h2>
+        <h2 class="no-print">Impressum</h2>
     </div>
     <div class="col-sm-8">
         <div class="row">
             <div class="col-xs-6">
-                <span>Lars K.W. Gohlke</span>
-                <div>
+                <div>Lars K.W. Gohlke <br/>
                     Tulpenstra&szlig;e 21<br/>
                     12203 Berlin<br/>
                     Deutschland
@@ -309,9 +315,9 @@
             </div>
             <div class="col-xs-6">
                 <div>
-                    &nbsp;<br/>
                     +49 3334 299307<br/>
-                    <a href="mailto:lkwg82@gmx.de?subject=Kontakt%20via%20website">lkwg82@gmx.de</a><br/>
+                    <a class="no-print" href="mailto:lkwg82@gmx.de?subject=Kontakt%20via%20website">lkwg82@gmx.de</a>
+                    <a class="print" href="email">lkwg82@gmx.de</a><br/>
                     &nbsp;
                 </div>
             </div>

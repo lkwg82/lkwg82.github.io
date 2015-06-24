@@ -210,6 +210,10 @@ h3 {
     color: grey;
 }
 
+.print{
+    display:none;
+}
+
 @media (max-width: 480px){
   .me {
     text-align:center;
@@ -236,11 +240,11 @@ h3 {
     text-align:center;
   }
 
-  .break:before,
-  .break:after{
-        content: "\A";
-        white-space:pre;
+  .col-xs-4,
+  .col-xs-8{
+      width:100%;
   }
+
 }
 
 @media (min-width: 481px){
@@ -274,6 +278,7 @@ h3 {
          text-align:center;
        }
 }
+
   @media (min-width: 600px){
 
       .me {
@@ -346,4 +351,43 @@ h3 {
        background-size:  100% 100%;
        min-height: 500px;
     }
+}
+
+@media print{
+
+    .intro{
+        margin-top:2rem;
+    }
+    .branding{
+        float: none;
+    }
+    .socialmedia > * {
+        display: block;
+        text-align:left;
+    }
+    .print-link{
+        font-size: 2rem;
+    }
+
+    .border-top{
+        margin: 2rem auto;
+        padding-top: 2rem;
+    }
+
+    #arbeiten .item{
+        margin-top: 3rem;
+    }
+
+    .col-sm-8{
+        width: 100%
+    }
+
+    .print{
+        display:block;
+    }
+    .no-print{ display:none }
+}
+
+#footer{
+    margin-bottom:30rem;
 }
