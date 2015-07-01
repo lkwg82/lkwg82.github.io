@@ -31,11 +31,12 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'www/output.js': [
-                        'bower_components/jquery/dist/jquery.min.js',
+                        'bower_components/jquery/dist/jquery.js',
                         'bower_components/animatescroll/animatescroll.js',
                         'js/decorate-links.js',
                         'js/google-analytics.js',
-                        'js/resourcetiming.js'
+                        'js/resourcetiming.js',
+                        'js/language.js'
                     ],
                     'www/loadCSS.js': 'bower_components/loadcss/loadCSS.js'
                 }
@@ -152,7 +153,7 @@ module.exports = function(grunt) {
                 spawn: true,
                 interrupt: true,
                 atBegin: true,
-                livereload: false
+                livereload: true
             }
         },
         devUpdate: {
