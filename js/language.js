@@ -1,15 +1,21 @@
 var template ={
   'en' :{
+        'work_fhb':'academic staff at the University of Applied Sciences Brandenburg',
+
+        'semester_abroad':'semester abroad in Jakarta/Indonesia at the ',
+            'semester_abroad_t1':'autonomous training on securing a web application',
+            'semester_abroad_t2':'feasibility of video conference in the area of high latency and small bandwidth',
+            'semester_abroad_t3':'English and Indonesian in daily life',
         'muellerberg':'carer in the shelter for handicapped people',
             'muellerberg_description':'autonoumous caring of 16 mental ill inhabitants',
         'zivi_pflege':'community service and male nurse in a nursing home',
         'army':'basic military service in Torgelow',
     'skills' : 'capabilities',
         'languages':'language skills',
-            'lang_en':'english',
-            'lang_id':'bahasa indonesia',
-            'lang_fr':'french',
-            'lang_es':'spanish',
+            'lang_en':'English',
+            'lang_id':'Indonesian',
+            'lang_fr':'French',
+            'lang_es':'Spanish',
 
     'education' :'education',
         'Informatikstudent_fhb2':'computer sciences at the University of Applied Sciences in Brandenburg (master - grade A<sup>-</sup>)',
@@ -36,7 +42,7 @@ else{
     $('.i18n').each( function(){
           var i18nKey = $(this).attr('i18n-key');
           var key = typeof i18nKey === 'undefined' ? this.innerText : i18nKey;
-          console.debug("i18n: " + key + " -> " + dictionary[key]);
+//          console.debug("i18n: " + key + " -> " + dictionary[key]);
 
           if ( typeof dictionary[key] === 'undefined' || dictionary[key].length == 0){
             console.warn('missing key:' + key);
