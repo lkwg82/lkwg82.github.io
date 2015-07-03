@@ -1,5 +1,14 @@
 var template ={
   'en' :{
+    'Arbeiten':'studies',
+    'master_t1':'thesis',
+    'master_t2':'analysis and concept - improving static error localisation',
+    'research_t1':'seminar paper',
+    'research_t2':'quality management with continuous integration - a practical feasibility study',
+    'diploma_t1':'diploma thesis',
+    'diploma_t2':'SOA for multi messaging - an integration concept with Skype',
+    'semesterAbroad_t1':'Semester abroad',
+    'semesterAbroad_t2':'Indonesia - far east',
     'work_exp' : 'work experiences',
         'work_is24' : 'Java EE developer',
             'work_is24_2' : 'DevOps with CLD, SELinux',
@@ -54,7 +63,7 @@ var template ={
 
 var language = (navigator.language || navigator.browserLanguage).split('-')[0];
 console.info("language:" + language);
-var languageKey = language === 'de' ? 'de' : 'en';
+var languageKey = 'en';//language === 'de' ? 'de' : 'en';
 
 if ( languageKey === 'de' ){
     // leave it as it is
