@@ -1,14 +1,8 @@
 var template ={
   'en' :{
-    'Arbeiten':'studies',
-    'master_t1':'thesis',
-    'master_t2':'analysis and concept - improving static error localisation',
-    'research_t1':'seminar paper',
-    'research_t2':'quality management with continuous integration - a practical feasibility study',
-    'diploma_t1':'diploma thesis',
-    'diploma_t2':'SOA for multi messaging - an integration concept with Skype',
-    'semesterAbroad_t1':'Semester abroad',
-    'semesterAbroad_t2':'Indonesia - far east',
+    'about_me':'About me',
+    'about_me_t1':"I'm a passionated java software craftman constantly striving to get the best solution for my customers, focussed heavily on dev-ops and overall quality of my software.",
+    'about_me_t2':'Customers value two things about software. The way it makes a machine behave; and the ease with which it can be changed.',
     'work_exp' : 'work experiences',
         'work_is24' : 'Java EE developer',
             'work_is24_2' : 'DevOps with CLD, SELinux',
@@ -57,13 +51,22 @@ var template ={
         'diplom_topic':'thesis: SOA for multi messaging - an integration concept with Skype',
         'Informatikstudent' : 'computer sciences at the BTU in Cottbus',
         'Abitur' : 'higher school graduation',
+    'Arbeiten':'studies',
+        'master_t1':'thesis',
+        'master_t2':'analysis and concept - improving static error localisation',
+        'research_t1':'seminar paper',
+        'research_t2':'quality management with continuous integration - a practical feasibility study',
+        'diploma_t1':'diploma thesis',
+        'diploma_t2':'SOA for multi messaging - an integration concept with Skype',
+        'semesterAbroad_t1':'Semester abroad',
+        'semesterAbroad_t2':'Indonesia - far east',
     'Impressum': 'imprint',
   }
 };
 
 var language = (navigator.language || navigator.browserLanguage).split('-')[0];
 console.info("language:" + language);
-var languageKey = 'en';//language === 'de' ? 'de' : 'en';
+var languageKey = language === 'de' ? 'de' : 'en';
 
 if ( languageKey === 'de' ){
     // leave it as it is

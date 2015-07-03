@@ -210,8 +210,15 @@ h3 {
     color: grey;
 }
 
-.print{
+.print,
+.print-in{
     display:none;
+}
+
+.cite{font-style:italic;}
+.source{
+    color: rgb(116, 96, 96);
+    text-align: right;
 }
 
 @media (max-width: 480px){
@@ -385,6 +392,11 @@ h3 {
     .print{
         display:block;
     }
+
+    .print-in{
+        display:inline;
+    }
+
     .no-print{
         display:none;
     }
