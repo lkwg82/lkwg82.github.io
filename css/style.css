@@ -115,6 +115,10 @@ h3 {
     font-size: 2rem;
 }
 
+#statement{
+    padding: 1em;
+}
+
 
 #arbeiten h2, h3, h4 {
     margin-left: 1rem;
