@@ -9,4 +9,4 @@ function www {
 
 docker build -t homepage docker
 www &
-docker run -v $(pwd):/src -ti -p 9000:9000 homepage grunt serve
+docker run -v $(pwd):/src -ti --user $(id -u):$(id -g) -p 9000:9000 homepage grunt serve
