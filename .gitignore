@@ -1,5 +1,5 @@
 /node_modules/
 /_site/
-/.idea/
+.idea/
 /tmp/
-/www/
+/www

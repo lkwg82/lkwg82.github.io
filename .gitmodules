@@ -1,0 +1,4 @@
+[submodule "www"]
+	path = www
+	url = git@github.com:lkwg82/lkwg82.github.io.git
+	branch = master
