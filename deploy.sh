@@ -5,4 +5,10 @@ set -e
 ./docker.sh npm install
 ./docker.sh grunt
 
-rsync  --archive -e ssh --delete-during -vr www homepage:/var/www
+pushd www
+
+git add *
+git commit -m "deployed at $(date)"
+git push origin HEAD:master
+
+popd
