@@ -93,6 +93,10 @@ module.exports = function(grunt) {
                         expand: true,
                         src: ['favicon.ico'],
                         dest: 'www'
+                    }, {
+                        expand: true,
+                        src: ['download/**'],
+                        dest: 'www'
                     }
                 ]
             }
