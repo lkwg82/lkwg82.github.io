@@ -13,3 +13,5 @@ git commit -m "deployed at $(date)"
 git push origin HEAD:master
 
 popd
+
+git push
