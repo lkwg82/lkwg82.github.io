@@ -2,7 +2,7 @@
 
 set -e
 
-npm install
-grunt
+./docker.sh npm install
+./docker.sh grunt
 
 rsync  --archive -e ssh --delete-during -vr www homepage:/var/www

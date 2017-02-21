@@ -1,31 +1,27 @@
 FROM ubuntu:16.10
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y npm
-RUN npm install -g grunt-cli
-RUN ln -s /usr/bin/nodejs /usr/bin/node
+RUN apt-get install -y npm \
+    && ln -s /usr/bin/nodejs /usr/bin/node
+RUN npm install -g grunt-cli \
+    && grunt --version
 RUN mkdir /src
+
+# needed for phantomjs 2.1 in grunt-module uncss
+RUN apt-get install -y libfontconfig1
 
 # install mozjpeg
 # instructions taken from https://www.robertwalter.de/2015/04/08/mozjpeg-3-0-0-on-debian-and-ubuntu/
 RUN apt-get install -y autoconf automake libtool nasm make pkg-config git \
     && git clone https://github.com/mozilla/mozjpeg.git \
     && cd mozjpeg \
-    && git checkout v3.1 \
+    # version > 2.1 is incompatible with grunt-imagemin
+    && git checkout v2.1 \
     && autoreconf -fiv \
     && ./configure -prefix=/usr \
-    && make \
-    && make install \
-    && cjpeg -version # check
-
-#RUN apt-get remove -y autoconf automake libtool nasm make pkg-config git \
+    && make -j16 \
+    && make install
+#    && apt-get remove -y autoconf automake libtool nasm make pkg-config git \
 #    && apt-get autoremove -y
 
-# needed for phantomjs 2.1 in grunt-module uncss
-RUN apt-get install -y libfontconfig1
-
 WORKDIR /src
-
-EXPOSE 9000
-
-CMD grunt serve
