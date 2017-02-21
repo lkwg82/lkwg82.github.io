@@ -6,7 +6,9 @@ module.exports = function(grunt) {
     var mozjpeg = require('imagemin-mozjpeg');
 
     grunt.initConfig({
-        clean: ["www"],
+        clean: {
+            www: ['www/*']
+        },
         uncss: {
             dist: {
                 files: {
