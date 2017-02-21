@@ -63,7 +63,7 @@ module.exports = function(grunt) {
         'string-replace': {
             async: {
                 files: {
-                    'www/': 'www/index.html',
+                    'www/': 'www/index.html'
                 },
                 options: {
                     replacements: [
@@ -91,9 +91,9 @@ module.exports = function(grunt) {
                         expand: true,
                         src: ['favicon.ico'],
                         dest: 'www'
-                    },
-                ],
-            },
+                    }
+                ]
+            }
         },
         imagemin: {
             static: {
@@ -114,7 +114,7 @@ module.exports = function(grunt) {
         },
         inline: {
             dist: {
-                src: 'www/index.html',
+                src: 'www/index.html'
             }
         },
         filerev: {
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
                 'css/*.css',
                 'js/*.js',
                 '*.json',
-                'index.html',
+                'index.html'
             ],
             tasks: [
                 'default', 'serve'
