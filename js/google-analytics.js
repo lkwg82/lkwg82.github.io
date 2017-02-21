@@ -124,46 +124,13 @@ if (isLocalhost) {
 			return visibleY && visibleX;
 		}
 
-		//~ var started;
-		//~ $.data(this, 'focusTimer', setTimeout(function() {
-		//~ var timerName = 'watchTimer';
-		//~ var window_focus;
-
-		//~ $(window).focus(function() {
-		//~ window_focus = true;
-		//~ }).blur(function() {
-		//~ window_focus = false;
-		//~ });
-
-		//~ if ( window_focus && !started){
-		//~ $.data(this, timerName, setTimeout(function() {
-		//~ $(".trackView").each(function(){
-		//~ var trackView = this;
-		//~ var id = $(trackView).attr('id');
-
-		//~ if ( isElementInViewport(trackView)){
-		//~ track("view","watch",id);
-		//~ }
-		//~ });
-		//~ started = true;
-		//~ }))
-		//~ }
-		//~ else{
-		//~ if (!window_focus){
-		//~ clearTimeout($.data(this, timerName));
-		//~ }
-		//~ }
-		//~ },500));
-
-
-
-		var areasSeen = new Array();
+		var areasSeen = [];
 
 		$(window).scroll(function() {
 			clearTimeout($.data(this, 'scrollTimer'));
 			$.data(this, 'scrollTimer', setTimeout(function() {
 
-				var areasNowSeen = new Array();
+				var areasNowSeen = [];
 
 				$(".trackView")
 					.each(function() {
@@ -171,18 +138,18 @@ if (isLocalhost) {
 						var id = $(trackView)
 							.attr('id');
 
-						if (!id) {
-							var rect = trackView.getBoundingClientRect();
-							// console.log("missing id at " + rect.top + "x" + rect.left +									" see " + $(trackView)									.text());
-						} else {
-							if (isElementInViewport(trackView)) {
-								//~ console.log(" visible " + id);
-								areasNowSeen.push(id);
-							}
-						}
+                        if (id) {
+                            if (isElementInViewport(trackView)) {
+                                //~ console.log(" visible " + id);
+                                areasNowSeen.push(id);
+                            }
+                        } else {
+                            // var rect = trackView.getBoundingClientRect();
+                            // console.log("missing id at " + rect.top + "x" + rect.left +									" see " + $(trackView)									.text());
+                        }
 					});
 
-				var newlySeen = new Array();
+				var newlySeen = [];
 
 				for (var i = 0; i < areasNowSeen.length; i++) {
 					var seen = false;
