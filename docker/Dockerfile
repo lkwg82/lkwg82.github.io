@@ -21,7 +21,8 @@ RUN apt-get install -y autoconf automake libtool nasm make pkg-config git \
 #RUN apt-get remove -y autoconf automake libtool nasm make pkg-config git \
 #    && apt-get autoremove -y
 
-RUN apt-get install -y phantomjs
+# needed for phantomjs 2.1 in grunt-module uncss
+RUN apt-get install -y libfontconfig1
 
 WORKDIR /src
 
