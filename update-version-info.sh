@@ -3,8 +3,7 @@
 set -e
 #set -x
 
-baseDir=$(git rev-parse --show-toplevel)
-file=$baseDir/index.html
+file=index.html
 
 version=$(git log  -n1 --format=format:"%ci %H")
 message="updated version info"
