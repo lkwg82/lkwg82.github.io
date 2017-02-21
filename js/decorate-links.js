@@ -1,5 +1,5 @@
 $(function() {
-	$("#header a").each(function() {
+	$("#header").find("a").each(function() {
 		var linkObject = this;
 		var link = $(linkObject).attr('href');
 
