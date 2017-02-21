@@ -3,6 +3,7 @@
 set -e
 
 ./docker.sh npm install
+./update-version-info.sh
 ./docker.sh grunt
 
 pushd www
