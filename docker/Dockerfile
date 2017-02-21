@@ -24,4 +24,8 @@ RUN apt-get install -y autoconf automake libtool nasm make pkg-config git \
 #    && apt-get remove -y autoconf automake libtool nasm make pkg-config git \
 #    && apt-get autoremove -y
 
+
+RUN  groupadd --gid 1000 group \
+    && useradd --create-home --uid 1000 --gid 1000 user
+
 WORKDIR /src
