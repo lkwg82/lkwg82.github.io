@@ -96,22 +96,6 @@ if (isLocalhost) {
 			}
 		});
 
-		$(document).mouseup(function() {
-			var selectedText = window.getSelection();
-
-			//~ console.debug(selectedText);
-
-			var nodeText = selectedText.focusNode.data;
-			var maxLength = Math.min(10, nodeText.length);
-			var snippet = nodeText.substr(0, maxLength);
-
-			if (selectedText.type == "Range") {
-				track("view", 'selected text', snippet + " [" + selectedText + "]");
-			} else if (selectedText.type == "Caret") {
-				track("view", 'click', snippet);
-			}
-		});
-
 		function isElementInViewport(el) {
 			var rect = el.getBoundingClientRect();
 
