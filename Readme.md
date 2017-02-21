@@ -4,6 +4,12 @@
 
 # development
 
+initial command (install dependencies + compile website)
+```
+./docker.sh npm install
+./docker.sh grunt
+```
+
 run to continuously recompile changed files
 
 ```

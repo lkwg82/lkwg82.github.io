@@ -147,7 +147,7 @@ module.exports = function(grunt) {
                 'index.html'
             ],
             tasks: [
-                'default', 'serve'
+                'default'
             ],
             options: {
                 spawn: true,
