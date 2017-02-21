@@ -4,6 +4,7 @@ var template ={
     'about_me_t1':"I'm a passionated java software craftman constantly striving to get the best solution for my customers, focussed heavily on dev-ops and overall quality of my software.",
     'about_me_t2':'Customers value two things about software. The way it makes a machine behave; and the ease with which it can be changed.',
     'work_exp' : 'work experiences',
+        'work_id' : 'Java developer',
         'work_west' : 'Java developer',
         'work_is24' : 'Java developer',
             'work_is24_2' : 'DevOps with CLD, SELinux',
