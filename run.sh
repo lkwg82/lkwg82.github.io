@@ -3,7 +3,6 @@
 # see https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
 set -Eeuo pipefail
 #set -x
-arg=
 
 function runTests {
     function _assertEqual {
@@ -49,8 +48,6 @@ function runTests {
         local actual=$(stat -c%s ${path})
 
         _assertEqual ${actual} ${expected}
-
-
     }
 
     _number_of_files www/download 15
@@ -64,7 +61,9 @@ function runTests {
     _size www/favicon.ico 318
 }
 
+# allows $1 to unset
 set +u
+
 case "$1" in
     "clean")
         rm -rf node_modules www
@@ -72,7 +71,7 @@ case "$1" in
     "compile")
         $0 docker grunt
     ;;
-    "d"|"docker")
+    "docker")
         docker build -t homepage docker
         # remove first argument from $@
         # https://stackoverflow.com/questions/2701400/remove-first-element-from-in-bash
@@ -93,6 +92,15 @@ case "$1" in
        runTests
     ;;
     *)
-        echo $0 "clean|compile|docker|full-test|init|test"
+        cat << EndOfMessage
+$0 <command> [args..]
+
+    clean
+    compile
+    docker
+    full-test
+    init
+    test
+EndOfMessage
     ;;
 esac
