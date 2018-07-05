@@ -50,14 +50,30 @@ function runTests {
         _assertEqual ${actual} ${expected}
     }
 
+    function _size_range {
+        local path=$1
+        local expectedLower=$2
+        local expectedUpper=$3
+
+        echo -n "  checking size '${path}' expect in range [${expectedLower},${expectedUpper}] bytes"
+        local actual=$(stat -c%s ${path})
+
+        if [ ${actual} -ge ${expectedLower} -a ${actual} -le ${expectedUpper} ]; then
+            echo " ... ok"
+        else
+            echo " but got ${actual}"
+            exit 1
+        fi
+    }
+
     _number_of_files www/download 15
     _number_of_files www/img/basic_social 1198
     _number_of_files www/img 1210
     _number_of_files www/img 13 1
-    _number_of_files www 1232
-    _number_of_files www 9 1
+    _number_of_files www 1235
+    _number_of_files www 12 1
 
-    _size www/index.html 29957
+    _size_range www/index.html 29900 31000
     _size www/favicon.ico 318
 }
 
@@ -67,6 +83,11 @@ set +u
 case "$1" in
     "clean")
         rm -rf node_modules www
+        git submodule update
+        pushd www
+        git checkout master
+        git pull
+        popd
     ;;
     "compile")
         $0 docker grunt
