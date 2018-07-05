@@ -90,6 +90,7 @@ case "$1" in
         popd
     ;;
     "compile")
+        $0 init
         $0 docker grunt
     ;;
     "deploy")
@@ -120,7 +121,7 @@ case "$1" in
         $0 compile
         runTests
     ;;
-    "grunt-serve")
+    "grunt_serve")
         function www {
            sleep 1
            x-www-browser http://localhost:9000/www/index.html
