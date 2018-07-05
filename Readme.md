@@ -6,14 +6,14 @@
 
 initial command (install dependencies + compile website)
 ```
-./docker.sh npm install
-./docker.sh grunt
+./run.sh docker npm install
+./run.sh docker grunt
 ```
 
 run to continuously recompile changed files
 
 ```
-./docker.sh grunt watch
+./run.sh docker grunt watch
 ```
 
 do have a live reload server
@@ -26,4 +26,17 @@ for deployment see
 
 ```
 ./deploy.sh
+```
+
+
+## tests
+
+for tests
+```
+./run.sh tests
+```
+
+clean test run
+```
+./run.sh full-test
 ```

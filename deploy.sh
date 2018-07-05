@@ -2,9 +2,9 @@
 
 set -e
 
-./docker.sh npm install
+./run.sh docker  npm install
 ./update-version-info.sh
-./docker.sh grunt
+./run.sh docker  grunt
 
 pushd www
 
