@@ -86,7 +86,7 @@ case "$1" in
         runTests
     ;;
     "init")
-        $0 docker npm install
+        $0 docker npm --progress false install
     ;;
     "test")
        echo "running tests"
