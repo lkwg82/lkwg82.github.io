@@ -19,7 +19,7 @@ run to continuously recompile changed files
 do have a live reload server
 
 ```
-./grunt_serve.sh
+./run.sh grunt_serve
 ```
 
 for deployment see

@@ -120,6 +120,16 @@ case "$1" in
         $0 compile
         runTests
     ;;
+    "grunt-serve")
+        function www {
+           sleep 1
+           x-www-browser http://localhost:9000/www/index.html
+        }
+
+        docker build -t homepage docker
+        www &
+        docker run -v ${PWD}:/src -ti --user $(id -u):$(id -g) -p 9000:9000 homepage grunt serve
+    ;;
     "init")
         $0 docker npm --progress false install
     ;;
@@ -148,8 +158,10 @@ $0 <command> [args..]
     deploy
     docker
     full-test
+    grunt_serve
     init
     test
+    update-version-info
 EndOfMessage
     ;;
 esac
