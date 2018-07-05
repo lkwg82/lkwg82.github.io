@@ -25,7 +25,7 @@ do have a live reload server
 for deployment see
 
 ```
-./deploy.sh
+./run.sh deploy
 ```
 
 

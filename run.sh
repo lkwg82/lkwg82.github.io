@@ -92,6 +92,21 @@ case "$1" in
     "compile")
         $0 docker grunt
     ;;
+    "deploy")
+        $0 docker  npm install
+        ./update-version-info.sh
+        $0 docker  grunt
+
+        pushd www
+
+        git add *
+        git commit -m "deployed at $(date)"
+        git push origin HEAD:master
+
+        popd
+
+        git push
+    ;;
     "docker")
         docker build -t homepage docker
         # remove first argument from $@
@@ -118,6 +133,7 @@ $0 <command> [args..]
 
     clean
     compile
+    deploy
     docker
     full-test
     init
