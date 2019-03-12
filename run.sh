@@ -9,7 +9,7 @@ function runTests {
         local actual=$1
         local expected=$2
 
-        if [ ${actual} -eq ${expected} ]; then
+        if [[ ${actual} -eq ${expected} ]]; then
             echo " ... ok"
         else
             echo " but got ${actual}"
@@ -21,7 +21,7 @@ function runTests {
         local actual=$1
         local expected=$2
 
-        if [ ${actual} -eq ${expected} ]; then
+        if [[ ${actual} -eq ${expected} ]]; then
             echo " ... ok"
         else
             echo " but got ${actual}"
@@ -58,7 +58,7 @@ function runTests {
         echo -n "  checking size '${path}' expect in range [${expectedLower},${expectedUpper}] bytes"
         local actual=$(stat -c%s ${path})
 
-        if [ ${actual} -ge ${expectedLower} -a ${actual} -le ${expectedUpper} ]; then
+        if [[ ${actual} -ge ${expectedLower} && ${actual} -le ${expectedUpper} ]]; then
             echo " ... ok"
         else
             echo " but got ${actual}"
@@ -144,10 +144,12 @@ case "$1" in
         version=$(git log  -n1 --format=format:"%ci %H")
         message="updated version info"
 
-        if [ "$(git log  -n1 --format=format:"%s")" != "$message" ] ;then
+        if [[ "$(git log  -n1 --format=format:"%s")" != "$message" ]] ;then
 
             sed -e 's#<span class="version">.*</span>#<span class="version">last changed '"$version"'</span>#' -i ${file}
             git commit --no-verify -m 'updated version info' ${file}
+        else
+            echo "nothing changed"
         fi
     ;;
     *)
