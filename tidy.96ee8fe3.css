@@ -163,6 +163,9 @@ ul {
   margin-top: 0;
   margin-bottom: 10px;
 }
+ul ul {
+  margin-bottom: 0;
+}
 .row {
   margin-right: -15px;
   margin-left: -15px;
