@@ -1,0 +1,2 @@
+$((function(){if("function"==typeof ga&&"object"==typeof window.performance&&"function"==typeof window.performance.getEntriesByName){function e(e,n,r){var t={timingCategory:e,timingVar:n,timingValue:r};console.log(t),ga("send","timing",t)}var n=performance.timing;e("latency","page",Math.round(n.responseEnd-n.fetchStart));var r=window.performance.getEntriesByType("resource"),t=0,o=0;for(var a in r){var i=r[a];t++,o+=Math.round(i.responseEnd-i.fetchStart)}e("latency","average",Math.round(o/t)),e("resources","count",t)}}));
+//# sourceMappingURL=index.dab0a033.js.map
