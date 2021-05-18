@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # see https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/
-set -Eeuo pipefail
-#set -x
+set -Eeu
+set -x
 
 function runTests {
     function _assertEqual {
@@ -90,13 +90,17 @@ case "$1" in
         popd
     ;;
     "compile")
-        $0 init
-        $0 docker grunt
+        $0 init || echo "with warnings"
+        echo "result $?"
+        $0 docker npm run build
+        rm -rf www/*
+        cp -Rv dist/* www
     ;;
     "deploy")
-        $0 docker  npm install
+        $0 clean
+        $0 compile
         $0 update-version-info
-        $0 docker  grunt
+        $0 docker npm build
 
         pushd www
 
@@ -113,7 +117,7 @@ case "$1" in
         # remove first argument from $@
         # https://stackoverflow.com/questions/2701400/remove-first-element-from-in-bash
         shift
-        docker run -v ${PWD}:/src --user $(id -u):$(id -g) -ti homepage $@
+        docker run -v "${PWD}":/src -ti --user $(id -u):$(id -g) -ti homepage $@
     ;;
     "full-test")
         $0 clean
@@ -121,18 +125,18 @@ case "$1" in
         $0 compile
         runTests
     ;;
-    "grunt_serve")
+    "serve")
         function www {
            sleep 1
-           x-www-browser http://localhost:9000/www/index.html
+           x-www-browser http://localhost:1234/www/index.html
         }
 
         docker build -t homepage docker
         www &
-        docker run -v ${PWD}:/src -ti --user $(id -u):$(id -g) -p 9000:9000 homepage grunt serve
+        docker run -v "${PWD}":/src -ti --user $(id -u):$(id -g) -p 1234:1234 homepage npm run start
     ;;
     "init")
-        $0 docker npm --progress false install
+        $0 docker npm install
     ;;
     "test")
        echo "running tests"

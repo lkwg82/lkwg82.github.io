@@ -1,5 +1,7 @@
 /node_modules/
 /_site/
 .idea/
+.parcel-cache
 /tmp/
 /www
+/dist

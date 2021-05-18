@@ -337,7 +337,7 @@ h3 {
     }
 
     .teaser {
-       background: url(img/teaser_4x1.JPG) no-repeat center center;
+       background: url(../img/teaser_4x1.JPG) no-repeat center center;
        background-size:  100% 100%;
        min-height: 300px;
     }
@@ -358,7 +358,7 @@ h3 {
 
 @media (min-width: 1050px){
     .teaser {
-       background: url(img/teaser_4.JPG) no-repeat center center;
+       background: url(../img/teaser_4.JPG) no-repeat center center;
        background-size:  100% 100%;
        min-height: 500px;
     }
