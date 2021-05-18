@@ -90,7 +90,7 @@ case "$1" in
         popd
     ;;
     "compile")
-        $0 init || echo "with warnings"
+        $0 init
         echo "result $?"
         $0 docker npm run build
         rm -rf www/*
@@ -121,7 +121,6 @@ case "$1" in
     ;;
     "full-test")
         $0 clean
-        $0 init
         $0 compile
         runTests
     ;;
@@ -133,6 +132,7 @@ case "$1" in
 
         docker build -t homepage docker
         www &
+        $0 init
         docker run -v "${PWD}":/src -ti --user $(id -u):$(id -g) -p 1234:1234 homepage npm run start
     ;;
     "init")
@@ -165,7 +165,7 @@ $0 <command> [args..]
     deploy
     docker
     full-test
-    grunt_serve
+    serve
     init
     test
     update-version-info
