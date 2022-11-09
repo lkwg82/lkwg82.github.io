@@ -100,7 +100,7 @@ case "$1" in
         $0 clean
         $0 compile
         $0 update-version-info
-        $0 docker npm build
+        $0 docker npm run build
 
         pushd www
 
