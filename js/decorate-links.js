@@ -1,7 +1,7 @@
 $(function() {
 	$("#header").find("a").each(function() {
-		var linkObject = this;
-		var link = $(linkObject).attr('href');
+		const linkObject = this;
+		const link = $(linkObject).attr('href');
 
 		if (link.match(/^#.*/)) {
 			$(linkObject).attr("href", '#');
